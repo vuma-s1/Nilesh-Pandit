@@ -1,0 +1,135 @@
+:root {
+    --color-background: #111111;
+    --color-text: #E4E4E4;
+    --color-text-hover: #FFFFFF;
+    --font-main: 'Satoshi', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--color-background);
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Helper for GSAP Text Reveals */
+.split-line-wrapper {
+    overflow: hidden;
+}
+
+/* Section base styles */
+.section {
+    min-height: 100vh;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Add padding top to account for fixed navigation */
+.section:first-of-type {
+    padding-top: 0;
+}
+
+/* Typography */
+.heading-display {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+
+.heading-large {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.text-body {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mb-large {
+    margin-bottom: 4rem;
+}
+
+.mb-medium {
+    margin-bottom: 2rem;
+}
+
+.mb-small {
+    margin-bottom: 1rem;
+}
+
+/* Responsive utilities */
+.hidden {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .sm\:block {
+        display: block;
+    }
+}
+
+/* Button styles */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--color-text);
+    color: var(--color-background);
+}
+
+.btn-primary:hover {
+    background: var(--color-text-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(228, 228, 228, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.btn-secondary:hover {
+    background: var(--color-text);
+    color: var(--color-background);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(228, 228, 228, 0.1);
+}
