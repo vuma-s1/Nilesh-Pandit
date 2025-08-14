@@ -30,37 +30,32 @@ const About = () => {
                             </TextReveal>
                             <div className={styles.skillsList}>
                                 <TextReveal as="div" className={styles.skill} delay={0.4}>
-                                    <span className={styles.skillNumber}>01</span>
                                     <div>
-                                        <h4>Founders</h4>
+                                        <h4><span className={styles.skillNumber}>01</span>Founders-</h4>
                                         <p>turning passion projects into professionally managed companies</p>
                                     </div>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.5}>
-                                    <span className={styles.skillNumber}>02</span>
                                     <div>
-                                        <h4>Family businesses</h4>
+                                        <h4><span className={styles.skillNumber}>02</span> Family businesses -</h4>
                                         <p>transitioning into modern governance structures</p>
                                     </div>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.6}>
-                                    <span className={styles.skillNumber}>03</span>
                                     <div>
-                                        <h4>Entrepreneurs</h4>
+                                        <h4><span className={styles.skillNumber}>03</span> Entrepreneurs -</h4>
                                         <p>seeking mentorship to navigate growth</p>
                                     </div>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.7}>
-                                    <span className={styles.skillNumber}>04</span>
                                     <div>
-                                        <h4>Early-stage ventures</h4>
+                                        <h4><span className={styles.skillNumber}>04</span> Early-stage ventures -</h4>
                                         <p>preparing for investor funding and expansion</p>
                                     </div>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.8}>
-                                    <span className={styles.skillNumber}>05</span>
                                     <div>
-                                        <h4>Boards</h4>
+                                        <h4><span className={styles.skillNumber}>05</span> Boards -</h4>
                                         <p>needing strategic counsel for high-stakes decisions</p>
                                     </div>
                                 </TextReveal>

@@ -162,6 +162,33 @@
     letter-spacing: 0.1em;
 }
 
+.ctaContainer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ctaButton {
+    font-family: var(--font-subheading);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
 @media (max-width: 768px) {
     .testimonialsSection {
         padding: 8vw 4vw;

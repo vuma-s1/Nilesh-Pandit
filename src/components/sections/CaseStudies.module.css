@@ -14,7 +14,7 @@
 .caseStudiesList {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     margin-bottom: 3rem;
 }
 
@@ -58,12 +58,14 @@
     color: var(--color-text-hover);
     line-height: 1.2;
     margin: 0;
+    margin-top: 3.5rem;
 }
 
 .caseContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 2rem;
 }
 
 .caseSection {
@@ -92,6 +94,12 @@
 
 .ctaContainer {
     text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .ctaButton {
@@ -106,7 +114,9 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .ctaButton:hover {
@@ -125,7 +135,6 @@
     
     .caseStudy {
         padding: 2.5rem 2rem;
-        margin-bottom: 1rem;
     }
     
     .caseContent {
@@ -183,7 +192,6 @@
     
     .caseStudy {
         padding: 2rem 1.5rem;
-        margin-bottom: 0.5rem;
     }
     
     .caseTitle {
