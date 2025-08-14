@@ -11,7 +11,22 @@
 
 .header {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+}
+
+.marqueeContainer {
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.marqueeText {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-weight: 600;
+    color: var(--color-text-hover);
+    white-space: nowrap;
+    animation: marqueeScroll 25s linear infinite;
+    display: inline-block;
 }
 
 .subtitle {
@@ -28,7 +43,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 .testimonialItem {
@@ -148,19 +163,35 @@
 }
 
 @media (max-width: 768px) {
+    .testimonialsSection {
+        padding: 8vw 4vw;
+    }
+    
     .testimonialsList {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        margin-bottom: 6rem;
+        gap: 2.5rem;
+        margin-bottom: 4rem;
     }
     
     .testimonialItem {
-        padding: 2rem;
+        padding: 2.5rem 2rem;
+    }
+    
+    .quoteText {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .quoteIcon {
+        font-size: 3rem;
+        top: -0.5rem;
+        left: -0.25rem;
     }
     
     .stats {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+        padding-top: 3rem;
     }
     
     .statNumber {
@@ -168,6 +199,45 @@
     }
     
     .header {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .marqueeText {
+        font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonialsSection {
+        padding: 6vw 3vw;
+    }
+    
+    .testimonialItem {
+        padding: 2rem 1.5rem;
+    }
+    
+    .quoteText {
+        font-size: 0.95rem;
+    }
+    
+    .quoteIcon {
+        font-size: 2.5rem;
+    }
+    
+    .statNumber {
+        font-size: 2rem;
+    }
+    
+    .marqueeText {
+        font-size: 1.75rem;
+    }
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }

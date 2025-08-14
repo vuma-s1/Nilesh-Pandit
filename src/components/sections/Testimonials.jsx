@@ -5,22 +5,19 @@ import styles from './Testimonials.module.css';
 const Testimonials = () => {
     const testimonials = [
         {
-            quote: "Divyansh transformed our vision into a stunning digital reality. His attention to detail and creative approach exceeded all our expectations.",
-            author: "Sarah Johnson",
-            role: "CEO, TechStart",
-            avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+            quote: "Vikram's clarity has transformed how we run our business. He makes complex financial matters simple and actionable.",
+            author: "CEO",
+            role: "Tech Firm"
         },
         {
-            quote: "Working with Divyansh was an absolute pleasure. He delivered a beautiful, functional website that perfectly represents our brand.",
-            author: "Michael Chen",
-            role: "Founder, Creative Agency",
-            avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+            quote: "We thought we were ready for investors — Vikram showed us exactly what was missing. We secured funding within months.",
+            author: "Founder",
+            role: "Startup"
         },
         {
-            quote: "The level of professionalism and creativity Divyansh brings to every project is remarkable. Highly recommended for any design work.",
-            author: "Emily Rodriguez",
-            role: "Marketing Director, InnovateCorp",
-            avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+            quote: "His approach to governance has saved us from costly mistakes more than once.",
+            author: "Director",
+            role: "Manufacturing Company"
         }
     ];
 
@@ -28,9 +25,11 @@ const Testimonials = () => {
         <section id="testimonials" className={`section ${styles.testimonialsSection}`}>
             <div className={styles.content}>
                 <div className={styles.header}>
-                    <TextReveal as="h2" className="heading-large">
-                        What Clients Say
-                    </TextReveal>
+                    <div className={styles.marqueeContainer}>
+                        <div className={styles.marqueeText}>
+                            Trusted by Leaders • Trusted by Leaders • Trusted by Leaders • Trusted by Leaders • Trusted by Leaders • Trusted by Leaders • Trusted by Leaders • Trusted by Leaders
+                        </div>
+                    </div>
                     <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
                         Don't just take my word for it. Here's what some of my clients 
                         have to say about working together.
@@ -50,9 +49,6 @@ const Testimonials = () => {
                                 <p className={styles.quoteText}>{testimonial.quote}</p>
                             </div>
                             <div className={styles.author}>
-                                <div className={styles.authorAvatar}>
-                                    <img src={testimonial.avatar} alt={testimonial.author} />
-                                </div>
                                 <div className={styles.authorInfo}>
                                     <h4 className={styles.authorName}>{testimonial.author}</h4>
                                     <span className={styles.authorRole}>{testimonial.role}</span>
@@ -62,20 +58,13 @@ const Testimonials = () => {
                     ))}
                 </div>
 
-                <div className={styles.stats}>
-                    <TextReveal as="div" className={styles.stat} delay={0.4}>
-                        <span className={styles.statNumber}>50+</span>
-                        <span className={styles.statLabel}>Projects Completed</span>
-                    </TextReveal>
-                    <TextReveal as="div" className={styles.stat} delay={0.5}>
-                        <span className={styles.statNumber}>30+</span>
-                        <span className={styles.statLabel}>Happy Clients</span>
-                    </TextReveal>
-                    <TextReveal as="div" className={styles.stat} delay={0.6}>
-                        <span className={styles.statNumber}>3+</span>
-                        <span className={styles.statLabel}>Years Experience</span>
-                    </TextReveal>
-                </div>
+                <TextReveal delay={0.8}>
+                    <div className={styles.ctaContainer}>
+                        <button className={`btn btn-primary ${styles.ctaButton}`}>
+                            Work With Me
+                        </button>
+                    </div>
+                </TextReveal>
             </div>
         </section>
     );

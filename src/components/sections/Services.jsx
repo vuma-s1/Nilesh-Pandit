@@ -6,21 +6,23 @@ const Services = () => {
     const services = [
         {
             number: '01',
-            title: 'Web Design',
-            description: 'Creating beautiful, user-centered digital experiences that engage and convert visitors into customers.',
-            features: ['UI/UX Design', 'Responsive Design', 'Prototyping', 'User Research']
+            title: 'From Informal to Institutional',
+            description: 'Many businesses start without formal systems. I help you create governance structures, reporting systems, and leadership roles that turn your business into a professionally managed, investor-ready organization.'
         },
         {
             number: '02',
-            title: 'Webflow Development',
-            description: 'Building fast, responsive websites with clean code and seamless animations using Webflow\'s powerful platform.',
-            features: ['Custom Development', 'CMS Integration', 'E-commerce', 'Performance Optimization']
+            title: 'Closing the Investor Confidence Gap',
+            description: 'Sometimes investors hesitate because they don\'t see enough clarity. I prepare your financials, structure, and pitch so they have every reason to invest.'
         },
         {
             number: '03',
-            title: 'Brand Identity',
-            description: 'Developing cohesive visual identities that tell your story and connect with your target audience.',
-            features: ['Logo Design', 'Brand Guidelines', 'Visual Systems', 'Brand Strategy']
+            title: 'Scaling Without Chaos',
+            description: 'Rapid growth can break a business if systems aren\'t ready. I create frameworks that allow you to expand without losing operational control or profitability.'
+        },
+        {
+            number: '04',
+            title: 'Reducing Risk & Protecting Reputation',
+            description: 'Good governance isn\'t just about compliance — it\'s about safeguarding your brand and leadership credibility. I design processes that prevent costly mistakes and build long-term trust.'
         }
     ];
 
@@ -28,12 +30,14 @@ const Services = () => {
         <section id="services" className={`section ${styles.servicesSection}`}>
             <div className={styles.content}>
                 <div className={styles.header}>
-                    <TextReveal as="h2" className="heading-large">
-                        What I Do
-                    </TextReveal>
+                    <div className={styles.marqueeContainer}>
+                        <div className={styles.marqueeText}>
+                            What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve
+                        </div>
+                    </div>
                     <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                        I specialize in creating digital experiences that combine beautiful design 
-                        with functional development, helping businesses establish their online presence.
+                      I Help Leaders Solve Problems That Decide the Future of Their Business
+                     When They face high-stakes decisions, they need someone who understands both the numbers and the bigger picture. That’s where I step in
                     </TextReveal>
                 </div>
                 
@@ -50,14 +54,6 @@ const Services = () => {
                                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                             </div>
                             <p className={styles.serviceDescription}>{service.description}</p>
-                            <ul className={styles.serviceFeatures}>
-                                {service.features.map((feature, idx) => (
-                                    <li key={idx} className={styles.feature}>
-                                        <span className={styles.featureDot}></span>
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
                         </TextReveal>
                     ))}
                 </div>

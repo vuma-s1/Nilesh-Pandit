@@ -1,0 +1,445 @@
+.engagementSection {
+    padding: 5vw 5vw;
+    background-color: #151515;
+    color: #E4E4E4;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-weight: 600;
+    color: var(--color-text-hover);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: var(--font-main);
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.8;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stepsContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.stepsRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.stepWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(228, 228, 228, 0.1);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.step:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(228, 228, 228, 0.2);
+    transform: translateY(-2px);
+}
+
+.stepNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.step:hover .stepNumber {
+    transform: scale(1.1);
+}
+
+.stepIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.step:hover .stepIcon {
+    transform: scale(1.1);
+}
+
+.stepTitle {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-hover);
+    margin-bottom: 0.5rem;
+    transition: color 0.5s ease;
+}
+
+.step:hover .stepTitle {
+    color: #E4E4E4;
+}
+
+.stepDescription {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+    max-width: 250px;
+}
+
+.connectorWrapper {
+    display: none;
+    position: relative;
+    margin: 0 1rem;
+    flex-shrink: 0;
+}
+
+.connector {
+    width: 80px;
+    height: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.connectorLine {
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.connectorPulse {
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    border-radius: 2px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.connectorParticle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.connectorArrow {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid white;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+.ctaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.ctaButton {
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-subheading);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 280px;
+    width: auto;
+}
+
+.ctaButton:hover {
+    background-color: #FF6B35 !important;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.marqueeWrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 1.5rem;
+}
+
+.marqueeWrapper .marquee-text {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.buttonOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: #f3f4f6;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 0.5rem;
+}
+
+.ctaButton:hover .buttonOverlay {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(60px);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .stepsRow {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .stepWrapper {
+        flex: 1;
+        max-width: none;
+    }
+
+    .connectorWrapper {
+        display: block;
+    }
+
+    .stepNumber {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .stepIcon {
+        padding: 1.5rem;
+    }
+
+    .stepTitle {
+        font-size: 2rem;
+    }
+
+    .stepDescription {
+        font-size: 1.125rem;
+        max-width: 300px;
+    }
+
+    .ctaButton {
+        padding: 1.25rem 3rem;
+        font-size: 1.125rem;
+        max-width: 320px;
+    }
+
+    .marqueeWrapper {
+        height: 1.75rem;
+    }
+
+    .marqueeWrapper .marquee-text {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .stepNumber {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+
+    .stepIcon {
+        padding: 1.25rem;
+    }
+
+    .stepTitle {
+        font-size: 1.75rem;
+    }
+
+    .stepDescription {
+        font-size: 1.0625rem;
+        max-width: 280px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .engagementSection {
+        padding: 3vw 3vw;
+    }
+
+    .headline {
+        font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .stepsRow {
+        gap: 2rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .stepNumber {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .stepIcon {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .stepTitle {
+        font-size: 1.25rem;
+    }
+
+    .stepDescription {
+        font-size: 0.9rem;
+        max-width: 220px;
+    }
+
+    .ctaButton {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+        max-width: 240px;
+    }
+
+    .marqueeWrapper {
+        height: 1.25rem;
+    }
+
+    .marqueeWrapper .marquee-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .step {
+        padding: 1.25rem;
+    }
+
+    .stepNumber {
+        width: 45px;
+        height: 45px;
+        font-size: 1.125rem;
+    }
+
+    .stepIcon {
+        padding: 0.625rem;
+    }
+
+    .stepTitle {
+        font-size: 1.125rem;
+    }
+
+    .stepDescription {
+        font-size: 0.875rem;
+        max-width: 200px;
+    }
+}

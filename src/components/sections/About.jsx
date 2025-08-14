@@ -23,31 +23,52 @@ const About = () => {
                     </div>
                 </div>
                 <div className={styles.skills}>
-                    <TextReveal as="h3" className={styles.skillsTitle} delay={0.3}>
-                        What I Solve
-                    </TextReveal>
-                    <div className={styles.skillsList}>
-                        <TextReveal as="div" className={styles.skill} delay={0.4}>
-                            <span className={styles.skillNumber}>01</span>
-                            <div>
-                                <h4>Founders</h4>
-                                <p>Turning passion projects into professionally managed companies</p>
+                    <div className={styles.skillsGrid}>
+                        <div className={styles.skillsContent}>
+                            <TextReveal as="h3" className={styles.skillsTitle} delay={0.3}>
+                             Over the last 15+ years, I've advised:
+                            </TextReveal>
+                            <div className={styles.skillsList}>
+                                <TextReveal as="div" className={styles.skill} delay={0.4}>
+                                    <span className={styles.skillNumber}>01</span>
+                                    <div>
+                                        <h4>Founders</h4>
+                                        <p>turning passion projects into professionally managed companies</p>
+                                    </div>
+                                </TextReveal>
+                                <TextReveal as="div" className={styles.skill} delay={0.5}>
+                                    <span className={styles.skillNumber}>02</span>
+                                    <div>
+                                        <h4>Family businesses</h4>
+                                        <p>transitioning into modern governance structures</p>
+                                    </div>
+                                </TextReveal>
+                                <TextReveal as="div" className={styles.skill} delay={0.6}>
+                                    <span className={styles.skillNumber}>03</span>
+                                    <div>
+                                        <h4>Entrepreneurs</h4>
+                                        <p>seeking mentorship to navigate growth</p>
+                                    </div>
+                                </TextReveal>
+                                <TextReveal as="div" className={styles.skill} delay={0.7}>
+                                    <span className={styles.skillNumber}>04</span>
+                                    <div>
+                                        <h4>Early-stage ventures</h4>
+                                        <p>preparing for investor funding and expansion</p>
+                                    </div>
+                                </TextReveal>
+                                <TextReveal as="div" className={styles.skill} delay={0.8}>
+                                    <span className={styles.skillNumber}>05</span>
+                                    <div>
+                                        <h4>Boards</h4>
+                                        <p>needing strategic counsel for high-stakes decisions</p>
+                                    </div>
+                                </TextReveal>
                             </div>
-                        </TextReveal>
-                        <TextReveal as="div" className={styles.skill} delay={0.5}>
-                            <span className={styles.skillNumber}>02</span>
-                            <div>
-                                <h4>Family Businesses</h4>
-                                <p>Building structured, financially resilient organizations</p>
-                            </div>
-                        </TextReveal>
-                        <TextReveal as="div" className={styles.skill} delay={0.6}>
-                            <span className={styles.skillNumber}>03</span>
-                            <div>
-                                <h4>Early-Stage Ventures</h4>
-                                <p>Supporting responsible growth and improved financial governance</p>
-                            </div>
-                        </TextReveal>
+                        </div>
+                        <div className={styles.skillsImage}>
+                            <img src="/1.png" alt="Business Advisory Meeting" />
+                        </div>
                     </div>
                 </div>
             </div>

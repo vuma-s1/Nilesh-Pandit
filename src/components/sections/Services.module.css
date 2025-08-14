@@ -14,6 +14,21 @@
     margin-bottom: 8rem;
 }
 
+.marqueeContainer {
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.marqueeText {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-weight: 600;
+    color: var(--color-text-hover);
+    white-space: nowrap;
+    animation: marqueeScroll 20s linear infinite;
+    display: inline-block;
+}
+
 .subtitle {
     font-family: var(--font-main);
     font-weight: 300;
@@ -26,18 +41,23 @@
 
 .servicesList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+    margin-left: 2rem;
 }
 
 .serviceItem {
-    padding: 3rem;
+    padding: 1rem;
     border: 1px solid rgba(228, 228, 228, 0.1);
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.02);
     transition: all 0.6s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .serviceItem::before {
@@ -62,34 +82,60 @@
     transform: translateY(-5px);
 }
 
+.serviceItem:hover .serviceHeader {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.serviceItem:hover .serviceDescription {
+    opacity: 0.9;
+    transform: translateY(0);
+}
+
 .serviceHeader {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
     margin-bottom: 2rem;
+    transition: all 0.4s ease;
+    width: 100%;
 }
 
 .serviceNumber {
-    font-size: 0.875rem;
-    font-weight: 500;
-    opacity: 0.5;
+    font-size: 1.25rem;
+    font-weight: 600;
+    opacity: 0.7;
     min-width: 2rem;
 }
 
 .serviceTitle {
     font-family: var(--font-subheading);
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color-text-hover);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.2;
+    word-wrap: break-word;
+    display: block;
 }
 
 .serviceDescription {
     font-family: var(--font-main);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 300;
     line-height: 1.6;
-    opacity: 0.8;
-    margin-bottom: 2rem;
+    opacity: 0;
+    margin: 0;
+    flex-grow: 1;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+    width: 100%;
+    text-align: left;
 }
 
 .serviceFeatures {
@@ -106,7 +152,7 @@
     align-items: center;
     gap: 0.75rem;
     font-family: var(--font-subheading);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 400;
     opacity: 0.7;
 }
@@ -119,17 +165,129 @@
     opacity: 0.6;
 }
 
-@media (max-width: 768px) {
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
     .servicesList {
-        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .serviceItem {
+        padding: 1.5rem;
+    }
+    
+    .serviceTitle {
+        font-size: 1.5rem;
+    }
+    
+    .serviceDescription {
+        font-size: 1rem;
+    }
+    
+    .feature {
+        font-size: 0.875rem;
+    }
+}
+
+/* Desktop (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .servicesList {
+        gap: 2.5rem;
+    }
+    
+    .serviceItem {
+        padding: 1.25rem;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .servicesList {
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
     
     .serviceItem {
-        padding: 2rem;
+        padding: 1rem;
+    }
+    
+    .serviceTitle {
+        font-size: 1.35rem;
+    }
+    
+    .serviceDescription {
+        font-size: 1rem;
+    }
+    
+    .feature {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .servicesSection {
+        padding: 8vw 4vw;
+    }
+    
+    .servicesList {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-left: 0;
+    }
+    
+    .serviceItem {
+        padding: 2rem 1.5rem;
     }
     
     .header {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .serviceTitle {
+        font-size: 1.5rem;
+    }
+    
+    .serviceDescription {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .feature {
+        font-size: 0.85rem;
+    }
+    
+    .marqueeText {
+        font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesSection {
+        padding: 6vw 3vw;
+    }
+    
+    .serviceItem {
+        padding: 1.5rem 1rem;
+    }
+    
+    .serviceTitle {
+        font-size: 1.25rem;
+    }
+    
+    .serviceDescription {
+        font-size: 0.95rem;
+    }
+    
+    .marqueeText {
+        font-size: 1.75rem;
+    }
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }

@@ -11,6 +11,7 @@
 .header {
     text-align: center;
     margin-bottom: 8rem;
+    padding-top: 3rem;
 }
 
 .subtitle {
@@ -75,7 +76,8 @@
 
 .timelineContent {
     flex: 1;
-    padding-left: 2rem;
+    padding-left: 10rem;
+    margin-left: 0;
 }
 
 .experienceHeader {
@@ -131,6 +133,10 @@
 }
 
 @media (max-width: 768px) {
+    .experienceSection {
+        padding: 8vw 4vw;
+    }
+    
     .timeline::before {
         left: 60px;
     }
@@ -160,7 +166,57 @@
         font-size: 1.25rem;
     }
     
+    .description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
     .header {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experienceSection {
+        padding: 6vw 3vw;
+    }
+    
+    .timelineItem {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .timeline::before {
+        left: 50px;
+    }
+    
+    .timelineItem::before {
+        left: 45px;
+    }
+    
+    .timelineYear {
+        min-width: 40px;
+    }
+    
+    .timelineYear span {
+        font-size: 0.9rem;
+    }
+    
+    .role {
+        font-size: 1.125rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+    
+    .tech {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
     }
 }

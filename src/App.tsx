@@ -7,8 +7,11 @@ import Marquee from './components/sections/Marquee';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Experience from './components/sections/Experience';
-import Testimonials from './components/sections/Testimonials';
 import Work from './components/sections/Work';
+import CaseStudies from './components/sections/CaseStudies';
+import Testimonials from './components/sections/Testimonials';
+import Media from './components/sections/Media';
+import Engagement from './components/sections/Engagement';
 import Footer from './components/sections/Footer';
 
 function App() {
@@ -42,8 +45,11 @@ function App() {
                 <About />
                 <Services />
                 <Experience />
-                <Testimonials />
                 <Work />
+                <CaseStudies />
+                <Testimonials />
+                <Media />
+                <Engagement />
                 <Footer />
             </main>
         </Layout>

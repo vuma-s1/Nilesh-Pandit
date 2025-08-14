@@ -1,108 +1,428 @@
-.footerSection {
-    justify-content: space-between;
-    padding: 10vw 5vw 5vw;
-    min-height: 100vh;
+.footer {
+    background-color: #f7f7f7;
+    color: #000000;
+    padding: 2rem 5vw 1.5rem;
+    border-top: 1px solid #000000;
 }
 
-.content {
+.footerContent {
     max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    color: #000000;
 }
 
-.cta {
+/* Hero section styles */
+.heroSection {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    color: #000000;
 }
 
-.ctaText {
-    font-family: var(--font-main);
-    font-weight: 300;
-    margin: 2rem 0 4rem;
-    max-width: 500px;
+.heroHeadline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.8;
+    letter-spacing: -0.02em;
 }
 
-.emailLink {
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 400;
-    color: var(--color-text);
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 2px;
+/* Button container and scrolling effect */
+.buttonContainer {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 0;
+    color: #000000;
+}
+
+.ctaButton {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 1.75rem 1.5rem;
+    font-family: var(--font-main);
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    min-width: 220px;
+    max-width: 280px;
+    text-decoration: none;
 }
 
-.emailLink:hover {
-    color: var(--color-text-hover);
-    text-decoration-color: transparent;
+.ctaButton:hover {
+    background-color: #333333;
 }
 
-.footerBottom {
+.marqueeContainer {
+    overflow: hidden;
+    flex: 1;
+    color: #000000;
+}
+
+.marqueeText {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+    animation: marqueeScroll 2s linear infinite;
+}
+
+.buttonText {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.globeIcon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #ffffff;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.footerMain {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 2rem;
-    padding-top: 4rem;
-    border-top: 1px solid rgba(228, 228, 228, 0.1);
+    margin-bottom: 1.5rem;
 }
 
-.logo {
-    width: 89px;
-    height: 28px;
-    opacity: 0.6;
-}
-
-.social {
+/* Left column - Social links */
+.socialLinks {
     display: flex;
-    gap: 2rem;
-    justify-self: center;
+    align-items: center;
+    gap: 1.5rem;
+    justify-self: start;
 }
 
 .socialLink {
-    font-family: var(--font-main);
+    color: #000000;
+    text-decoration: none;
     font-size: 0.875rem;
-    font-weight: 300;
-    opacity: 0.6;
+    font-weight: 400;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .socialLink:hover {
+    opacity: 0.8;
+}
+
+/* Center column - Logo and Name */
+.centerContent {
+    justify-self: center;
+    text-align: center;
+}
+
+.logoName {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.name {
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.miniBio {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 0 auto;
     opacity: 1;
 }
 
-.copyright {
+/* Right column - Navigation */
+.navigation {
+    display: flex;
+    gap: 1.5rem;
     justify-self: end;
-    font-family: var(--font-main);
-    font-size: 0.875rem;
-    font-weight: 300;
-    opacity: 0.4;
+    flex-wrap: wrap;
 }
 
+.navLink {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+.navLink:hover {
+    opacity: 0.8;
+}
+
+/* Bottom row */
+.footerBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #000000;
+}
+
+.bottomLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.siteMap {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.bottomCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.address {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+}
+
+.bottomRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.email {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.phone {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .footerBottom {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
+    .heroHeadline {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding: 0 1rem;
+        margin-bottom: 2.5rem;
     }
     
-    .social {
+    .ctaButton {
+        padding: 1.5rem 1.25rem;
+        font-size: 1.125rem;
+        min-width: 200px;
+        max-width: 260px;
+    }
+    
+    .buttonText {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+    
+    .globeIcon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .miniBio {
+        font-size: 0.7rem;
+        max-width: 280px;
+        line-height: 1.5;
+    }
+    
+    .navigation {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .navLink {
+        font-size: 0.8rem;
+    }
+    
+    .footerMain {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .socialLinks {
         justify-self: center;
         flex-wrap: wrap;
         justify-content: center;
     }
     
-    .copyright {
+    .navigation {
         justify-self: center;
     }
     
-    .cta {
-        margin-bottom: 6rem;
+    .footerBottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .bottomRight {
+        justify-content: center;
+    }
+    
+    .contact {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 3vw 1.5rem;
+    }
+    
+    .heroHeadline {
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .ctaButton {
+        padding: 1.5rem 1rem;
+        font-size: 1rem;
+        min-width: 180px;
+        max-width: 240px;
+    }
+    
+    .buttonText {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .globeIcon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .miniBio {
+        font-size: 0.65rem;
+        max-width: 250px;
+        line-height: 1.4;
+    }
+    
+    .navigation {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navLink {
+        font-size: 0.75rem;
+    }
+    
+    .socialLinks {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .logoName {
+        gap: 0.25rem;
+    }
+    
+    .name {
+        font-size: 0.8rem;
+    }
+    
+    .socialLinks {
+        gap: 1rem;
+    }
+    
+    .navigation {
+        gap: 1.5rem;
+    }
+}
+
+/* Desktop specific styles for bigger button */
+@media (min-width: 1024px) {
+    .footer {
+        padding: 4rem 5vw 2rem;
+    }
+    
+    .ctaButton {
+        padding: 2rem 2rem;
+        font-size: 1.25rem;
+        min-width: 260px;
+        max-width: 320px;
+    }
+    
+    .buttonText {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    
+    .globeIcon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .heroHeadline {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
     }
 }

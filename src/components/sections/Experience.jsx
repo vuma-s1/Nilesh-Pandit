@@ -3,34 +3,34 @@ import TextReveal from '../shared/TextReveal';
 import styles from './Experience.module.css';
 
 const Experience = () => {
-    const experiences = [
+    const steps = [
         {
-            year: '2024',
-            company: 'Freelance Designer',
-            role: 'Creative Designer & Developer',
-            description: 'Working with various clients to create stunning digital experiences, from brand identity to full-scale web applications.',
-            technologies: ['Webflow', 'Figma', 'React', 'GSAP']
+            year: '01',
+            company: '',
+            role: 'Assess',
+            description: 'Understand your strengths, weaknesses, and opportunities',
+            technologies: ['Business Analysis', 'Gap Assessment', 'Market Research', 'Risk Evaluation']
         },
         {
-            year: '2023',
-            company: 'Digital Agency',
-            role: 'Senior Web Designer',
-            description: 'Led design initiatives for major client projects, focusing on user experience and conversion optimization.',
-            technologies: ['Adobe Creative Suite', 'Webflow', 'JavaScript', 'CSS']
+            year: '02',
+            company: '',
+            role: 'Architect',
+            description: 'Create a structure that supports growth and inspires investor trust',
+            technologies: ['Governance Design', 'Financial Modeling', 'Compliance Framework', 'Investor Relations']
         },
         {
-            year: '2022',
-            company: 'Tech Startup',
-            role: 'UI/UX Designer',
-            description: 'Designed and prototyped user interfaces for a fast-growing SaaS platform, improving user engagement by 40%.',
-            technologies: ['Figma', 'Principle', 'HTML/CSS', 'Vue.js']
+            year: '03',
+            company: '',
+            role: 'Align',
+            description: 'Match your financial strategy with your business goals',
+            technologies: ['Strategic Planning', 'Capital Allocation', 'Performance Metrics', 'Goal Setting']
         },
         {
-            year: '2021',
-            company: 'Creative Studio',
-            role: 'Junior Designer',
-            description: 'Started my journey in digital design, working on branding projects and learning the fundamentals of web design.',
-            technologies: ['Photoshop', 'Illustrator', 'Sketch', 'InVision']
+            year: '04',
+            company: '',
+            role: 'Accelerate',
+            description: 'Put the plan into action and measure results',
+            technologies: ['Implementation', 'Progress Tracking', 'Performance Monitoring', 'Continuous Improvement']
         }
     ];
 
@@ -39,16 +39,15 @@ const Experience = () => {
             <div className={styles.content}>
                 <div className={styles.header}>
                     <TextReveal as="h2" className="heading-large">
-                        Experience
+                        The Structured Growth Approach
                     </TextReveal>
                     <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                        A journey through various roles and projects that shaped my expertise 
-                        in design and development.
+                        A Simple 4-Step Path to Long-Term Growth
                     </TextReveal>
                 </div>
 
                 <div className={styles.timeline}>
-                    {experiences.map((exp, index) => (
+                    {steps.map((step, index) => (
                         <TextReveal 
                             key={index}
                             as="div" 
@@ -56,16 +55,16 @@ const Experience = () => {
                             delay={index * 0.1}
                         >
                             <div className={styles.timelineYear}>
-                                <span>{exp.year}</span>
+                                <span>{step.year}</span>
                             </div>
                             <div className={styles.timelineContent}>
                                 <div className={styles.experienceHeader}>
-                                    <h3 className={styles.role}>{exp.role}</h3>
-                                    <span className={styles.company}>{exp.company}</span>
+                                    <h3 className={styles.role}>{step.role}</h3>
+                                    <span className={styles.company}>{step.company}</span>
                                 </div>
-                                <p className={styles.description}>{exp.description}</p>
+                                <p className={styles.description}>{step.description}</p>
                                 <div className={styles.technologies}>
-                                    {exp.technologies.map((tech, idx) => (
+                                    {step.technologies.map((tech, idx) => (
                                         <span key={idx} className={styles.tech}>
                                             {tech}
                                         </span>

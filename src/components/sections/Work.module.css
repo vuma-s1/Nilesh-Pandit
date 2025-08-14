@@ -7,6 +7,7 @@
 .content {
     max-width: 1200px;
     width: 100%;
+    padding-top: 3rem;
 }
 
 .projectsList {
@@ -87,10 +88,18 @@
 }
 
 @media (max-width: 768px) {
+    .workSection {
+        padding: 8vw 4vw;
+    }
+    
+    .content {
+        padding-top: 2rem;
+    }
+    
     .projectItem {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
     
     .projectInfo {
@@ -98,10 +107,40 @@
     }
     
     .projectTitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .projectImage {
+        height: 250px;
+    }
+    
+    .projectMeta {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .workSection {
+        padding: 6vw 3vw;
+    }
+    
+    .projectItem {
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+    
+    .projectTitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .projectImage {
         height: 200px;
+    }
+    
+    .projectMeta {
+        font-size: 0.75rem;
     }
 }

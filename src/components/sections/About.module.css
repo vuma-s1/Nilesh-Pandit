@@ -52,7 +52,44 @@
 }
 
 .skills {
-    padding-top: 2rem;
+    padding-top: -2rem;
+    padding-bottom: 4rem;
+    text-align: left;
+    margin-top: -2rem;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    justify-items: start;
+}
+
+.skillsContent {
+    width: 100%;
+}
+
+.skillsImage {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.skillsImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.skillsImage:hover img {
+    transform: scale(1.05);
 }
 
 .skillsTitle {
@@ -61,18 +98,25 @@
     font-weight: 600;
     margin-bottom: 3rem;
     opacity: 0.8;
+    text-align: left;
+    margin-left: 0;
 }
 
 .skillsList {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .skill {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
 }
 
 .skillNumber {
@@ -87,6 +131,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .skill p {
@@ -94,15 +139,101 @@
     font-size: 1rem;
     opacity: 0.7;
     line-height: 1.6;
+    text-align: left;
 }
 
 @media (max-width: 768px) {
-    .content {
+    .aboutSection {
+        padding: 8vw 4vw;
+        padding-top: 20vw;
+    }
+    
+    .aboutGrid {
         grid-template-columns: 1fr;
         gap: 4rem;
+        margin-bottom: 6rem;
+    }
+    
+    .aboutImage {
+        height: 300px;
+    }
+    
+    .aboutHeading {
+        top: -6rem;
+        left: 2rem;
+        font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
+    }
+    
+    .description {
+        max-width: 100%;
     }
     
     .skills {
         padding-top: 0;
+    }
+    
+    .skillsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .skillsImage {
+        height: 280px;
+        order: -1;
+    }
+    
+    .skillsTitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    
+    .skill {
+        gap: 1.5rem;
+    }
+    
+    .skill h4 {
+        font-size: 1.125rem;
+    }
+    
+    .skill p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutSection {
+        padding: 6vw 3vw;
+        padding-top: 15vw;
+    }
+    
+    .aboutGrid {
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    .aboutImage {
+        height: 250px;
+    }
+    
+    .aboutHeading {
+        top: -4rem;
+        left: 1rem;
+        font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+    }
+    
+    .skillsImage {
+        height: 240px;
+    }
+    
+    .skill {
+        gap: 1rem;
+    }
+    
+    .skill h4 {
+        font-size: 1rem;
+    }
+    
+    .skill p {
+        font-size: 0.9rem;
     }
 }

@@ -6,24 +6,33 @@ import styles from './Work.module.css';
 const Work = () => {
     const projects = [
         {
-            title: "E-Commerce Platform",
-            category: "Web Design & Development",
-            year: "2024",
-            image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=800",
+            title: "Business Structuring & Governance",
+            category: "Transition from informal to professionally managed",
+            image: "/1.png",
             link: "#"
         },
         {
-            title: "Brand Identity System",
-            category: "Branding & Design",
-            year: "2024",
-            image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
+            title: "Mentorship for Founders & First-Generation Entrepreneurs ",
+            category: " Strategic direction to scale confidently",
+            image: "/2.png",
             link: "#"
         },
         {
-            title: "Portfolio Website",
-            category: "Webflow Development",
-            year: "2023",
-            image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
+            title: "Investor Readiness & Capital Access",
+            category: "From collateral facilitation to investor trust-building",
+            image: "/3.png",
+            link: "#"
+        },
+        {
+            title: "Growth Advisory ",
+            category: "Scale-up strategies, governance improvements, and risk management",
+            image: "/4.png",
+            link: "#"
+        },
+        {
+            title: "Financial Inclusion Support ",
+            category: "Helping businesses with growth potential access the resources they need",
+            image: "/5.png",
             link: "#"
         }
     ];
@@ -32,7 +41,10 @@ const Work = () => {
         <section id="work" className={`section ${styles.workSection}`}>
             <div className={styles.content}>
                 <TextReveal as="h2" className="heading-large mb-large">
-                    Selected Work
+                    Advisory Services
+                </TextReveal>
+                <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
+                    How I Help Leaders Win Long-Term
                 </TextReveal>
                 <div className={styles.projectsList}>
                     {projects.map((project, index) => (
