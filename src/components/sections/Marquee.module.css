@@ -1,0 +1,46 @@
+.marqueeSection {
+  padding: 1.5rem 0 15rem 0;
+  background-color: #111111;
+  color: #E4E4E4;
+  overflow: hidden;
+}
+
+.marqueeContainer {
+  width: 100%;
+}
+
+.marqueeHeadline {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 1.25rem + 3.75vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.marqueeScroll {
+  display: flex;
+  width: fit-content;
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 2rem;
+}
+
+.marqueeText {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+.marqueeIcon {
+  width: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+  height: auto;
+  margin-left: 2rem;
+}

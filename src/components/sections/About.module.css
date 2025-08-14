@@ -1,19 +1,54 @@
 .aboutSection {
     justify-content: center;
     padding: 10vw 5vw;
+    padding-top: 40vw;
 }
 
 .content {
     max-width: 1200px;
     width: 100%;
+}
+
+.aboutGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
     align-items: start;
+    margin-bottom: 8rem;
+}
+
+.aboutImage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: visible;
+    border-radius: 12px;
+    padding-top: 2rem;
+}
+
+.aboutHeading {
+    position: absolute;
+    top: -8rem;
+    left: 5rem;
+    z-index: 2;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 2rem + 5vw, 6.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+}
+
+.aboutImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
 }
 
 .description {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .skills {
@@ -23,7 +58,7 @@
 .skillsTitle {
     font-family: var(--font-subheading);
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 3rem;
     opacity: 0.8;
 }
@@ -50,14 +85,13 @@
 .skill h4 {
     font-family: var(--font-subheading);
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .skill p {
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     font-size: 1rem;
-    font-weight: 300;
     opacity: 0.7;
     line-height: 1.6;
 }

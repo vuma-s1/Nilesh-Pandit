@@ -3,6 +3,7 @@ import Layout from './components/shared/Layout';
 import Navigation from './components/shared/Navigation';
 import Loader from './components/Loader/Loader';
 import Hero from './components/sections/Hero';
+import Marquee from './components/sections/Marquee';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Experience from './components/sections/Experience';
@@ -37,6 +38,7 @@ function App() {
             <Navigation />
             <main style={{ visibility: isLoading ? 'hidden' : 'visible' }}>
                 <Hero />
+                <Marquee />
                 <About />
                 <Services />
                 <Experience />
