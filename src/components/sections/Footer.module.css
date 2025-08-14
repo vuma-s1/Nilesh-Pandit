@@ -19,6 +19,8 @@
 }
 
 .ctaText {
+    font-family: var(--font-main);
+    font-weight: 300;
     margin: 2rem 0 4rem;
     max-width: 500px;
     margin-left: auto;
@@ -27,8 +29,9 @@
 }
 
 .emailLink {
+    font-family: var(--font-heading);
     font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     text-decoration: underline;
     text-underline-offset: 8px;
@@ -63,8 +66,9 @@
 }
 
 .socialLink {
+    font-family: var(--font-main);
     font-size: 0.875rem;
-    font-weight: 400;
+    font-weight: 300;
     opacity: 0.6;
     transition: opacity 0.3s ease;
 }
@@ -75,7 +79,9 @@
 
 .copyright {
     justify-self: end;
+    font-family: var(--font-main);
     font-size: 0.875rem;
+    font-weight: 300;
     opacity: 0.4;
 }
 
