@@ -1,16 +1,51 @@
 import React from 'react';
 
 const Logo = (props) => (
-  <svg width="89" height="28" viewBox="0 0 89 28" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <g mask="url(#mask0_42_5311)">
-      <path d="M34.3 0H42.39V28H34.3V0Z" fill="currentColor"/>
-      <path d="M0 0H8.09V28H0V0Z" fill="currentColor"/>
-      <path d="M17.15 0H25.24V28H17.15V0Z" fill="currentColor"/>
-    </g>
-    <path d="M45.09 0H53.18V28H45.09V0Z" fill="currentColor"/>
-    <path d="M62.24 0H70.33V28H62.24V0Z" fill="currentColor"/>
-    <path d="M79.39 0H87.48V28H79.39V0Z" fill="currentColor"/>
-  </svg>
+  <div 
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.75rem',
+      fontFamily: 'var(--font-heading)',
+      color: 'currentColor',
+      fontSize: 'clamp(0.8rem, 0.6rem + 1vw, 1.2rem)'
+    }}
+    {...props}
+  >
+    {/* Stylized "V" icon */}
+    <div
+      style={{
+        width: 'clamp(24px, 20px + 1vw, 32px)',
+        height: 'clamp(24px, 20px + 1vw, 32px)',
+        border: '2px solid currentColor',
+        borderRadius: '4px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: 'clamp(0.8rem, 0.6rem + 0.5vw, 1.2rem)',
+        fontWeight: '700',
+        fontFamily: 'var(--font-heading)',
+        letterSpacing: '0.05em',
+        flexShrink: 0
+      }}
+    >
+      V
+    </div>
+    
+    {/* Name text */}
+    <div
+      style={{
+        fontSize: 'clamp(0.7rem, 0.5rem + 0.8vw, 1rem)',
+        fontWeight: '600',
+        color: 'rgba(228, 228, 228, 0.8)',
+        letterSpacing: '0.02em',
+        lineHeight: '1.2',
+        whiteSpace: 'nowrap'
+      }}
+    >
+      Shri Vikram P
+    </div>
+  </div>
 );
 
 export default Logo;

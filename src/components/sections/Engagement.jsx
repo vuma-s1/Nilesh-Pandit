@@ -263,7 +263,10 @@ const Engagement = () => {
                 </div>
 
                 <div className={styles.ctaContainer}>
-                    <button
+                    <a
+                        href="https://calendly.com/team-symbiotes/book-appointement"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         ref={buttonRef}
                         className={styles.ctaButton}
                     >
@@ -273,7 +276,7 @@ const Engagement = () => {
                             </div>
                         </div>
                         <div className={styles.buttonOverlay}></div>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

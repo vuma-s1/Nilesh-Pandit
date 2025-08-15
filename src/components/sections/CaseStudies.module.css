@@ -22,9 +22,10 @@
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(228, 228, 228, 0.1);
     border-radius: 1rem;
-    padding: 3rem;
+    padding: 3.5rem;
     transition: all 0.3s ease;
     position: relative;
+    min-height: 320px;
 }
 
 .caseStudy:not(:last-child)::after {
@@ -71,7 +72,7 @@
     color: var(--color-text-hover);
     line-height: 1.2;
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .caseDescription {
@@ -82,6 +83,18 @@
     color: #E4E4E4;
     opacity: 0.8;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.caseSection {
+    display: flex;
+    align-items: flex-start;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    width: 100%;
 }
 
 .caseDescription strong {
@@ -89,8 +102,9 @@
     text-transform: uppercase;
     color: #FFFFFF;
     opacity: 1;
-    margin-right: 0.4em;
-    margin-left: 0.8em;
+    min-width: 100px;
+    flex-shrink: 0;
+    margin-right: 0.5em;
 }
 
 .caseDescription strong:first-child {
@@ -142,6 +156,7 @@
     
     .caseStudy {
         padding: 2.5rem 2rem;
+        min-height: 280px;
     }
     
     .caseStudy:not(:last-child)::after {
@@ -151,6 +166,7 @@
     .caseTitle {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+        margin-top: 2rem;
     }
     
     .caseNumber {
@@ -162,7 +178,7 @@
     }
     
     .caseStudyHeader {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .caseDescription {
@@ -171,8 +187,11 @@
     }
     
     .caseDescription strong {
-        margin-right: 0.3em;
-        margin-left: 0.6em;
+        margin-right: 0.4em;
+    }
+    
+    .caseSection {
+        margin-bottom: 0.6rem;
     }
     
     .caseStudiesList {
@@ -198,6 +217,7 @@
     
     .caseStudy {
         padding: 2rem 1.5rem;
+        min-height: 260px;
     }
     
     .caseStudy:not(:last-child)::after {
@@ -207,6 +227,7 @@
     .caseTitle {
         font-size: 1.5rem;
         margin-bottom: 0.75rem;
+        margin-top: 1.5rem;
     }
     
     .caseNumber {
@@ -215,7 +236,7 @@
     }
     
     .caseStudyHeader {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
     }
     
     .caseDescription {
@@ -224,8 +245,11 @@
     }
     
     .caseDescription strong {
-        margin-right: 0.25em;
-        margin-left: 0.5em;
+        margin-right: 0.3em;
+    }
+    
+    .caseSection {
+        margin-bottom: 0.5rem;
     }
     
     .caseStudiesList {

@@ -60,9 +60,14 @@ const Testimonials = () => {
 
                 <TextReveal delay={0.8}>
                     <div className={styles.ctaContainer}>
-                        <button className={`btn btn-primary ${styles.ctaButton}`}>
+                        <a 
+                            href="https://calendly.com/team-symbiotes/book-appointement" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={`btn btn-primary ${styles.ctaButton}`}
+                        >
                             Work With Me
-                        </button>
+                        </a>
                     </div>
                 </TextReveal>
             </div>

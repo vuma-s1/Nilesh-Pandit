@@ -40,7 +40,7 @@ const Loader = ({ onComplete }) => {
         <div ref={loaderRef} className={styles.loader}>
             <div className={styles.content}>
                 <div ref={textRef} className={styles.text}>
-                    Loading Experience
+                    Shri Vikram P
                 </div>
                 <div className={styles.progressContainer}>
                     <div ref={progressRef} className={styles.progress}></div>

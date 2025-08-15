@@ -16,8 +16,13 @@ const Media = () => {
                 
                 <TextReveal delay={0.4}>
                     <div className={styles.ctaContainer}>
-                        <button className={`btn btn-primary ${styles.ctaButton}`}>
-                        </button>
+                        <a 
+                            href="https://calendly.com/team-symbiotes/book-appointement" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={`btn btn-primary ${styles.ctaButton}`}
+                        >
+                        </a>
                     </div>
                 </TextReveal>
             </div>

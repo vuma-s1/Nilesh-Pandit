@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from './components/shared/Layout';
 import Navigation from './components/shared/Navigation';
 import Loader from './components/Loader/Loader';
+import CalendlyModal from './components/CalendlyModal';
 import Hero from './components/sections/Hero';
 import Marquee from './components/sections/Marquee';
 import About from './components/sections/About';
@@ -16,11 +17,15 @@ import Footer from './components/sections/Footer';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
+    const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
     const handleLoadingComplete = () => {
         // Add a slight delay to ensure all DOM is ready before making it visible
         setTimeout(() => setIsLoading(false), 200);
     };
+
+    const openCalendly = () => setIsCalendlyOpen(true);
+    const closeCalendly = () => setIsCalendlyOpen(false);
     
     useEffect(() => {
         // Prevent scrolling during loading
@@ -38,7 +43,7 @@ function App() {
     return (
         <Layout>
             {isLoading && <Loader onComplete={handleLoadingComplete} />}
-            <Navigation />
+            <Navigation openCalendly={openCalendly} />
             <main style={{ visibility: isLoading ? 'hidden' : 'visible' }}>
                 <Hero />
                 <Marquee />
@@ -46,12 +51,13 @@ function App() {
                 <Services />
                 <Experience />
                 <Work />
-                <CaseStudies />
-                <Testimonials />
-                <Media />
-                <Engagement />
-                <Footer />
+                <CaseStudies openCalendly={openCalendly} />
+                <Testimonials openCalendly={openCalendly} />
+                <Media openCalendly={openCalendly} />
+                <Engagement openCalendly={openCalendly} />
+                <Footer openCalendly={openCalendly} />
             </main>
+            <CalendlyModal isOpen={isCalendlyOpen} onClose={closeCalendly} />
         </Layout>
     );
 }

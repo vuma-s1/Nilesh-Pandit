@@ -2,7 +2,7 @@ import React from 'react';
 import TextReveal from '../shared/TextReveal';
 import styles from './CaseStudies.module.css';
 
-const CaseStudies = () => {
+const CaseStudies = ({ openCalendly }) => {
     const caseStudies = [
         {
             id: 1 ,
@@ -54,18 +54,27 @@ const CaseStudies = () => {
                                 <h3 className={styles.caseTitle}>{study.title}</h3>
                             </div>
                             
-                            <p className={styles.caseDescription}>
-                                <strong>PROBLEM</strong> {study.problem}{' '}
-                                <strong>ACTION</strong> {study.action}{' '}
-                                <strong>RESULT</strong> {study.result}
-                            </p>
+                            <div className={styles.caseDescription}>
+                                <div className={styles.caseSection}>
+                                    <strong>PROBLEM</strong>: {study.problem}
+                                </div>
+                                <div className={styles.caseSection}>
+                                    <strong>ACTION</strong>: {study.action}
+                                </div>
+                                <div className={styles.caseSection}>
+                                    <strong>RESULT</strong>: {study.result}
+                                </div>
+                            </div>
                         </TextReveal>
                     ))}
                 </div>
                 
                 <TextReveal delay={1.2}>
                     <div className={styles.ctaContainer}>
-                        <button className={`btn btn-primary ${styles.ctaButton}`}>
+                        <button 
+                            onClick={openCalendly}
+                            className={`btn btn-primary ${styles.ctaButton}`}
+                        >
                             Book a Call
                         </button>
                     </div>

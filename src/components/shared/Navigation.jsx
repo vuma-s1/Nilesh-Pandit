@@ -6,7 +6,7 @@ import styles from './Navigation.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navigation = () => {
+const Navigation = ({ openCalendly }) => {
     const navRef = useRef(null);
     const [activeSection, setActiveSection] = useState('hero');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -116,9 +116,13 @@ const Navigation = () => {
 
                 {/* Desktop CTA */}
                 <div className={styles.navCta}>
-                    <a href="#contact" className={styles.ctaButton} data-hoverable>
+                    <button 
+                        onClick={openCalendly}
+                        className={styles.ctaButton} 
+                        data-hoverable
+                    >
                         Let's Talk
-                    </a>
+                    </button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -148,13 +152,12 @@ const Navigation = () => {
                         </li>
                     ))}
                     <li>
-                        <a 
-                            href="#contact" 
+                        <button 
+                            onClick={openCalendly}
                             className={styles.mobileCtaButton}
-                            onClick={(e) => handleNavClick(e, '#contact')}
                         >
                             Let's Talk
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
