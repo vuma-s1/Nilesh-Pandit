@@ -1,29 +1,43 @@
 import React, { useEffect } from 'react';
-import styles from './CalendlyModal.module.css';
 
 const CalendlyModal = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen && window.Calendly) {
-      // Re-initialize Calendly when modal opens
-      window.Calendly.initInlineWidget({
-        url: 'https://calendly.com/team-symbiotes/book-appointement',
-        parentElement: document.querySelector('.calendly-inline-widget'),
-        minWidth: '320px',
-        height: '700px'
-      });
+    console.log('CalendlyModal useEffect triggered:', { isOpen, hasCalendly: !!window.Calendly });
+    
+    if (isOpen) {
+      if (window.Calendly) {
+        console.log('Opening Calendly popup...');
+        // Use popup widget instead of inline widget
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/team-symbiotes/book-appointement'
+        });
+        
+        // Close our modal state after Calendly popup opens
+        setTimeout(() => {
+          onClose();
+        }, 100);
+      } else {
+        console.error('Calendly not loaded yet');
+        // Try to load Calendly if not available
+        const script = document.createElement('script');
+        script.src = 'https://assets.calendly.com/assets/external/widget.js';
+        script.async = true;
+        script.onload = () => {
+          console.log('Calendly script loaded');
+          if (window.Calendly) {
+            window.Calendly.initPopupWidget({
+              url: 'https://calendly.com/team-symbiotes/book-appointement'
+            });
+            setTimeout(() => onClose(), 100);
+          }
+        };
+        document.head.appendChild(script);
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
-
-  return (
-    <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>×</button>
-        <div className="calendly-inline-widget" />
-      </div>
-    </div>
-  );
+  // Don't render anything - just trigger the popup
+  return null;
 };
 
 export default CalendlyModal;

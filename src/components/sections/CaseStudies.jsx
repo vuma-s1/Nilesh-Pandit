@@ -69,16 +69,17 @@ const CaseStudies = ({ openCalendly }) => {
                     ))}
                 </div>
                 
-                <TextReveal delay={1.2}>
-                    <div className={styles.ctaContainer}>
-                        <button 
-                            onClick={openCalendly}
-                            className={`btn btn-primary ${styles.ctaButton}`}
-                        >
-                            Book a Call
-                        </button>
-                    </div>
-                </TextReveal>
+                <div className={styles.ctaContainer}>
+                    <button 
+                        onClick={() => {
+                            console.log('CaseStudies button clicked');
+                            openCalendly();
+                        }}
+                        className={`btn btn-primary ${styles.ctaButton}`}
+                    >
+                        Book a Call
+                    </button>
+                </div>
             </div>
         </section>
     );

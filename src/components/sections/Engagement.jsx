@@ -6,7 +6,7 @@ import styles from './Engagement.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Engagement = () => {
+const Engagement = ({ openCalendly }) => {
     const sectionRef = useRef(null);
     const stepsRef = useRef([]);
     const connectorsRef = useRef([]);
@@ -262,22 +262,20 @@ const Engagement = () => {
                     </div>
                 </div>
 
-                <div className={styles.ctaContainer}>
-                    <a
-                        href="https://calendly.com/team-symbiotes/book-appointement"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ref={buttonRef}
-                        className={styles.ctaButton}
-                    >
+                            <div className={styles.ctaContainer}>
+                <button
+                    onClick={openCalendly}
+                    ref={buttonRef}
+                    className={styles.ctaButton}
+                >
                         <div className={styles.marqueeWrapper}>
                             <div className="marquee-text">
                                 Start Your Journey • Transform Your Business • Achieve Success • Start Your Journey • Transform Your Business • Achieve Success •
                             </div>
                         </div>
-                        <div className={styles.buttonOverlay}></div>
-                    </a>
-                </div>
+                                            <div className={styles.buttonOverlay}></div>
+                </button>
+            </div>
             </div>
         </section>
     );

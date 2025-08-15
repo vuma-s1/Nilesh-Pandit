@@ -2,7 +2,7 @@ import React from 'react';
 import TextReveal from '../shared/TextReveal';
 import styles from './Testimonials.module.css';
 
-const Testimonials = () => {
+const Testimonials = ({ openCalendly }) => {
     const testimonials = [
         {
             quote: "Vikram's clarity has transformed how we run our business. He makes complex financial matters simple and actionable.",
@@ -58,18 +58,17 @@ const Testimonials = () => {
                     ))}
                 </div>
 
-                <TextReveal delay={0.8}>
-                    <div className={styles.ctaContainer}>
-                        <a 
-                            href="https://calendly.com/team-symbiotes/book-appointement" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className={`btn btn-primary ${styles.ctaButton}`}
-                        >
-                            Work With Me
-                        </a>
-                    </div>
-                </TextReveal>
+                <div className={styles.ctaContainer}>
+                    <button 
+                        onClick={() => {
+                            console.log('Testimonials button clicked');
+                            openCalendly();
+                        }}
+                        className={`btn btn-primary ${styles.ctaButton}`}
+                    >
+                        Work With Me
+                    </button>
+                </div>
             </div>
         </section>
     );
