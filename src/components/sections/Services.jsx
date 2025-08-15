@@ -33,8 +33,13 @@ const Services = () => {
                     <div className={styles.marqueeContainer}>
                         <div className={styles.marqueeText}>
                             What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve
-                   ers Solve Problems That Decide the Future of Their Business
-                     When They face high-stakes decisions, they need someone who understands both the numbers and the bigger picture. That’s where I step in
+                        </div>
+                    </div>
+                    <TextReveal as="h2" className="heading-large mb-medium" delay={0.1}>
+                        I Help Leaders Solve Problems That Decide the Future of Their Business
+                    </TextReveal>
+                    <TextReveal as="p" className="text-body mb-large" delay={0.2}>
+                        When they face high-stakes decisions, they need someone who understands both the numbers and the bigger picture. That's where I step in.
                     </TextReveal>
                 </div>
                 
