@@ -30,34 +30,29 @@ const About = () => {
                             </TextReveal>
                             <div className={styles.skillsList}>
                                 <TextReveal as="div" className={styles.skill} delay={0.4}>
-                                    <div>
-                                        <h4><span className={styles.skillNumber}>01</span>Founders-</h4>
-                                        <p>turning passion projects into professionally managed companies</p>
-                                    </div>
+                                    <h4 className={styles.skillItem}>
+                                        <span className={styles.skillNumber}>01</span> <strong>Founders</strong> - turning passion projects into professionally managed companies
+                                    </h4>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.5}>
-                                    <div>
-                                        <h4><span className={styles.skillNumber}>02</span> Family businesses -</h4>
-                                        <p>transitioning into modern governance structures</p>
-                                    </div>
+                                    <h4 className={styles.skillItem}>
+                                        <span className={styles.skillNumber}>02</span> <strong>Family businesses</strong> - transitioning into modern governance structures
+                                    </h4>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.6}>
-                                    <div>
-                                        <h4><span className={styles.skillNumber}>03</span> Entrepreneurs -</h4>
-                                        <p>seeking mentorship to navigate growth</p>
-                                    </div>
+                                    <h4 className={styles.skillItem}>
+                                        <span className={styles.skillNumber}>03</span> <strong>Entrepreneurs</strong> - seeking mentorship to navigate growth
+                                    </h4>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.7}>
-                                    <div>
-                                        <h4><span className={styles.skillNumber}>04</span> Early-stage ventures -</h4>
-                                        <p>preparing for investor funding and expansion</p>
-                                    </div>
+                                    <h4 className={styles.skillItem}>
+                                        <span className={styles.skillNumber}>04</span> <strong>Early-stage ventures</strong> - preparing for investor funding and expansion
+                                    </h4>
                                 </TextReveal>
                                 <TextReveal as="div" className={styles.skill} delay={0.8}>
-                                    <div>
-                                        <h4><span className={styles.skillNumber}>05</span> Boards -</h4>
-                                        <p>needing strategic counsel for high-stakes decisions</p>
-                                    </div>
+                                    <h4 className={styles.skillItem}>
+                                        <span className={styles.skillNumber}>05</span> <strong>Boards</strong> - needing strategic counsel for high-stakes decisions
+                                    </h4>
                                 </TextReveal>
                             </div>
                         </div>

@@ -14,7 +14,7 @@
 .caseStudiesList {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
     margin-bottom: 3rem;
 }
 
@@ -24,6 +24,19 @@
     border-radius: 1rem;
     padding: 3rem;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+.caseStudy:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: rgba(228, 228, 228, 0.2);
+    border-radius: 50%;
 }
 
 .caseStudy:hover {
@@ -33,7 +46,7 @@
 }
 
 .caseStudyHeader {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
@@ -58,48 +71,41 @@
     color: var(--color-text-hover);
     line-height: 1.2;
     margin: 0;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
-.caseContent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-.caseSection {
-    display: flex;
-    flex-direction: column;
-}
-
-.sectionTitle {
-    font-family: var(--font-subheading);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-text-hover);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.sectionText {
+.caseDescription {
     font-family: var(--font-main);
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #E4E4E4;
     opacity: 0.8;
     margin: 0;
 }
 
+.caseDescription strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-right: 0.4em;
+    margin-left: 0.8em;
+}
+
+.caseDescription strong:first-child {
+    margin-left: 0;
+}
+
 .ctaContainer {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .ctaButton {
@@ -114,9 +120,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    margin: 0;
     width: fit-content;
+    text-align: center;
 }
 
 .ctaButton:hover {
@@ -137,9 +144,8 @@
         padding: 2.5rem 2rem;
     }
     
-    .caseContent {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .caseStudy:not(:last-child)::after {
+        bottom: -2rem;
     }
     
     .caseTitle {
@@ -156,21 +162,21 @@
     }
     
     .caseStudyHeader {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
     }
     
-    .sectionTitle {
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
-    }
-    
-    .sectionText {
+    .caseDescription {
         font-size: 0.95rem;
         line-height: 1.7;
     }
     
+    .caseDescription strong {
+        margin-right: 0.3em;
+        margin-left: 0.6em;
+    }
+    
     .caseStudiesList {
-        gap: 2.5rem;
+        gap: 3.5rem;
         margin-bottom: 3rem;
     }
     
@@ -194,6 +200,10 @@
         padding: 2rem 1.5rem;
     }
     
+    .caseStudy:not(:last-child)::after {
+        bottom: -1.5rem;
+    }
+    
     .caseTitle {
         font-size: 1.5rem;
         margin-bottom: 0.75rem;
@@ -205,25 +215,21 @@
     }
     
     .caseStudyHeader {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
-    .caseContent {
-        gap: 1.5rem;
-    }
-    
-    .sectionTitle {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .sectionText {
+    .caseDescription {
         font-size: 0.9rem;
         line-height: 1.6;
     }
     
+    .caseDescription strong {
+        margin-right: 0.25em;
+        margin-left: 0.5em;
+    }
+    
     .caseStudiesList {
-        gap: 2rem;
+        gap: 2.5rem;
         margin-bottom: 2.5rem;
     }
     

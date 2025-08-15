@@ -54,22 +54,11 @@ const CaseStudies = () => {
                                 <h3 className={styles.caseTitle}>{study.title}</h3>
                             </div>
                             
-                            <div className={styles.caseContent}>
-                                <div className={styles.caseSection}>
-                                    <h4 className={styles.sectionTitle}>Problem</h4>
-                                    <p className={styles.sectionText}>{study.problem}</p>
-                                </div>
-                                
-                                <div className={styles.caseSection}>
-                                    <h4 className={styles.sectionTitle}>Action</h4>
-                                    <p className={styles.sectionText}>{study.action}</p>
-                                </div>
-                                
-                                <div className={styles.caseSection}>
-                                    <h4 className={styles.sectionTitle}>Result</h4>
-                                    <p className={styles.sectionText}>{study.result}</p>
-                                </div>
-                            </div>
+                            <p className={styles.caseDescription}>
+                                <strong>PROBLEM</strong> {study.problem}{' '}
+                                <strong>ACTION</strong> {study.action}{' '}
+                                <strong>RESULT</strong> {study.result}
+                            </p>
                         </TextReveal>
                     ))}
                 </div>

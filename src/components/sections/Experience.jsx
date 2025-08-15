@@ -7,28 +7,28 @@ const Experience = () => {
         {
             year: '01',
             company: '',
-            role: 'Assess -',
+            role: 'Assess',
             description: 'Understand your strengths, weaknesses, and opportunities',
             technologies: ['Business Analysis', 'Gap Assessment', 'Market Research', 'Risk Evaluation']
         },
         {
             year: '02',
             company: '',
-            role: 'Architect -',
+            role: 'Architect',
             description: 'Create a structure that supports growth and inspires investor trust',
             technologies: ['Governance Design', 'Financial Modeling', 'Compliance Framework', 'Investor Relations']
         },
         {
             year: '03',
             company: '',
-            role: 'Align -',
+            role: 'Align',
             description: 'Match your financial strategy with your business goals',
             technologies: ['Strategic Planning', 'Capital Allocation', 'Performance Metrics', 'Goal Setting']
         },
         {
             year: '04',
             company: '',
-            role: 'Accelerate -',
+            role: 'Accelerate',
             description: 'Put the plan into action and measure results',
             technologies: ['Implementation', 'Progress Tracking', 'Performance Monitoring', 'Continuous Improvement']
         }
@@ -59,10 +59,11 @@ const Experience = () => {
                             </div>
                             <div className={styles.timelineContent}>
                                 <div className={styles.experienceHeader}>
-                                    <h3 className={styles.role}>{step.role}</h3>
+                                    <h3 className={styles.roleDescription}>
+                                        <strong>{step.role}</strong>{' '}{step.description}
+                                    </h3>
                                     <span className={styles.company}>{step.company}</span>
                                 </div>
-                                <p className={styles.description}>{step.description}</p>
                                 <div className={styles.technologies}>
                                     {step.technologies.map((tech, idx) => (
                                         <span key={idx} className={styles.tech}>

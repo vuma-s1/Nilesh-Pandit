@@ -60,7 +60,7 @@
 
 .skillsGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: start;
     justify-items: start;
@@ -78,6 +78,7 @@
     position: relative;
     margin-left: auto;
     margin-right: 0;
+    order: 2;
 }
 
 .skillsImage img {
@@ -116,7 +117,7 @@
     justify-content: flex-start;
     text-align: left;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .skillNumber {
@@ -124,22 +125,22 @@
     font-weight: 500;
     opacity: 0.5;
     min-width: 2rem;
+    margin-right: 0.5rem;
 }
 
-.skill h4 {
+.skillItem {
     font-family: var(--font-subheading);
     font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
     text-align: left;
+    flex: 1;
 }
 
-.skill p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    opacity: 0.7;
-    line-height: 1.6;
-    text-align: left;
+.skillItem strong {
+    font-weight: 600;
+    margin-right: 0.5em;
 }
 
 @media (max-width: 768px) {
@@ -179,7 +180,7 @@
     
     .skillsImage {
         height: 280px;
-        order: -1;
+        order: 2;
     }
     
     .skillsTitle {
@@ -189,15 +190,16 @@
     
     .skill {
         gap: 1.5rem;
+        max-width: 100%;
     }
     
-    .skill h4 {
+    .skillItem {
         font-size: 1.125rem;
-        margin-bottom: 0.75rem;
+        line-height: 1.5;
     }
     
-    .skill p {
-        font-size: 0.95rem;
+    .skillItem strong {
+        margin-right: 0.4em;
     }
 }
 
@@ -230,11 +232,12 @@
         gap: 1rem;
     }
     
-    .skill h4 {
+    .skillItem {
         font-size: 1rem;
+        line-height: 1.4;
     }
     
-    .skill p {
-        font-size: 0.9rem;
+    .skillItem strong {
+        margin-right: 0.3em;
     }
 }

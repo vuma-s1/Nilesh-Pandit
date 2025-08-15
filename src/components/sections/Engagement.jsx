@@ -85,17 +85,7 @@ const Engagement = () => {
                 }
             });
 
-            // Floating animation for steps (desktop only)
-            steps.forEach((step, index) => {
-                gsap.to(step, {
-                    y: "+=15",
-                    duration: 3 + index * 0.5,
-                    ease: "sine.inOut",
-                    repeat: -1,
-                    yoyo: true,
-                    delay: index * 0.2,
-                });
-            });
+            // Removed floating animation - cards now stay constant
         } else {
             gsap.set(steps, {
                 scale: 1,
