@@ -10,7 +10,8 @@ const Hero = () => {
                     Turning Good Businesses <br/>into Strong, Investor-Ready Organizations
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.3}>
-                    Crafting digital experiences that blend creativity with functionality
+                  Helping founders, boards, and family businesses bring structure, secure funding, and grow without losing control.
+
                 </TextReveal>
             </div>
             <div className={styles.scrollIndicator}>

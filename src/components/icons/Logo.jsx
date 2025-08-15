@@ -15,10 +15,6 @@ const Logo = (props) => (
     {/* Stylized "V" icon */}
     <div
       style={{
-        width: 'clamp(28px, 24px + 1vw, 32px)',
-        height: 'clamp(28px, 24px + 1vw, 32px)',
-        border: '2px solid currentColor',
-        borderRadius: '4px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

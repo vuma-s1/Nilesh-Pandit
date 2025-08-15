@@ -226,21 +226,21 @@
 /* Mobile (max-width: 767px) */
 @media (max-width: 767px) {
     .servicesSection {
-        padding: 8vw 4vw;
+        padding: 6vw 4vw;
     }
     
     .servicesList {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1.5rem;
         margin-left: 0;
     }
     
     .serviceItem {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
     }
     
     .header {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     
     .serviceTitle {

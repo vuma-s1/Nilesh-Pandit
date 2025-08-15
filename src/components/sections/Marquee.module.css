@@ -44,3 +44,13 @@
   height: auto;
   margin-left: 2rem;
 }
+
+@media (max-width: 768px) {
+  .marqueeSection {
+    padding: 1rem 0 5rem 0;
+  }
+  
+  .marqueeHeadline {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -43,12 +43,12 @@
 
 @media (max-width: 768px) {
     .heroSection {
-        padding-bottom: 10vw;
-        padding-top: 2rem;
+        padding-bottom: 1vw;
+        padding-top: 0.25rem;
     }
     
     .content {
-        margin-top: -2rem;
+        margin-top: -0.25rem;
     }
     
     .scrollIndicator {
