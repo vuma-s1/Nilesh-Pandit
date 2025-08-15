@@ -1,8 +1,8 @@
 .mediaSection {
-    padding: 5vw 5vw;
+    padding: 2vw 5vw;
     background-color: #111111;
     color: #E4E4E4;
-    min-height: 100vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@
     font-weight: 300;
     line-height: 1.6;
     opacity: 0.8;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     max-width: 800px;
     text-align: center;
     margin-left: auto;
@@ -97,8 +97,8 @@
 
 @media (max-width: 768px) {
     .mediaSection {
-        padding: 8vw 4vw;
-        min-height: 80vh;
+        padding: 2vw 4vw;
+        min-height: 30vh;
     }
     
     .headline {
@@ -108,7 +108,7 @@
     
     .description {
         font-size: 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         max-width: 600px;
     }
     

@@ -104,7 +104,7 @@
     opacity: 1;
     min-width: 100px;
     flex-shrink: 0;
-    margin-right: 0.5em;
+    margin-right: 0.1em;
 }
 
 .caseDescription strong:first-child {
@@ -187,7 +187,7 @@
     }
     
     .caseDescription strong {
-        margin-right: 0.4em;
+        margin-right: 0.1em;
     }
     
     .caseSection {
@@ -245,7 +245,7 @@
     }
     
     .caseDescription strong {
-        margin-right: 0.3em;
+        margin-right: 0.1em;
     }
     
     .caseSection {

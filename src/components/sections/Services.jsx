@@ -33,10 +33,7 @@ const Services = () => {
                     <div className={styles.marqueeContainer}>
                         <div className={styles.marqueeText}>
                             What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve • What I Solve
-                        </div>
-                    </div>
-                    <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                      I Help Leaders Solve Problems That Decide the Future of Their Business
+                   ers Solve Problems That Decide the Future of Their Business
                      When They face high-stakes decisions, they need someone who understands both the numbers and the bigger picture. That’s where I step in
                     </TextReveal>
                 </div>

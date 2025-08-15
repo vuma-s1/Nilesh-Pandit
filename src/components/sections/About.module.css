@@ -121,11 +121,11 @@
 }
 
 .skillNumber {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
     font-weight: 500;
     opacity: 0.5;
     min-width: 2rem;
-    margin-right: 0.25rem;
+    margin-right: 0;
 }
 
 .skillItem {
@@ -140,7 +140,7 @@
 
 .skillItem strong {
     font-weight: 600;
-    margin-right: 0.25em;
+    margin-right: 0;
 }
 
 @media (max-width: 768px) {
@@ -199,7 +199,7 @@
     }
     
     .skillItem strong {
-        margin-right: 0.4em;
+        margin-right: 0;
     }
 }
 
@@ -238,6 +238,6 @@
     }
     
     .skillItem strong {
-        margin-right: 0.3em;
+        margin-right: 0;
     }
 }
