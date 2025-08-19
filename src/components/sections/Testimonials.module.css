@@ -171,6 +171,7 @@
     align-items: center;
     width: 100%;
     position: relative;
+    transform: translateX(8%);
 }
 
 .ctaButton {
@@ -233,6 +234,10 @@
     
     .marqueeText {
         font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    }
+    
+    .ctaContainer {
+        transform: translateX(0) !important;
     }
 }
 
