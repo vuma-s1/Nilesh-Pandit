@@ -14,10 +14,7 @@ const Hero = () => {
 
                 </TextReveal>
             </div>
-            <div className={styles.scrollIndicator}>
-                <span className={styles.scrollText}>Scroll to explore</span>
-                <div className={styles.scrollLine}></div>
-            </div>
+
         </header>
     );
 };

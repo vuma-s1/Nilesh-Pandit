@@ -9,7 +9,7 @@ import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Experience from './components/sections/Experience';
 import Work from './components/sections/Work';
-import CaseStudies from './components/sections/CaseStudies';
+import NewSection from './components/sections/NewSection';
 import Testimonials from './components/sections/Testimonials';
 import Media from './components/sections/Media';
 import Engagement from './components/sections/Engagement';
@@ -51,7 +51,7 @@ function App() {
                 <Services />
                 <Experience />
                 <Work />
-                <CaseStudies openCalendly={openCalendly} />
+                <NewSection openCalendly={openCalendly} />
                 <Testimonials openCalendly={openCalendly} />
                 <Media openCalendly={openCalendly} />
                 <Engagement openCalendly={openCalendly} />

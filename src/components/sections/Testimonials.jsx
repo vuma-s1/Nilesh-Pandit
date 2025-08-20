@@ -50,8 +50,7 @@ const Testimonials = ({ openCalendly }) => {
                             </div>
                             <div className={styles.author}>
                                 <div className={styles.authorInfo}>
-                                    <h4 className={styles.authorName}>{testimonial.author}</h4>
-                                    <span className={styles.authorRole}>{testimonial.role}</span>
+                                    <h4 className={styles.authorName}>{testimonial.author} <span className={styles.authorRole}>{testimonial.role}</span></h4>
                                 </div>
                             </div>
                         </TextReveal>

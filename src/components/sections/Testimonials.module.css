@@ -47,7 +47,7 @@
 }
 
 .testimonialItem {
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(228, 228, 228, 0.1);
     border-radius: 12px;
@@ -62,7 +62,7 @@
 }
 
 .quote {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -127,6 +127,7 @@
     font-size: 0.875rem;
     font-weight: 300;
     opacity: 0.6;
+    margin-left: 0.5rem;
 }
 
 .stats {
@@ -194,7 +195,7 @@
 
 @media (max-width: 768px) {
     .testimonialsSection {
-        padding: 8vw 4vw;
+        padding: 15vw 4vw 8vw 4vw !important;
     }
     
     .testimonialsList {
@@ -204,7 +205,7 @@
     }
     
     .testimonialItem {
-        padding: 2.5rem 2rem;
+        padding: 1.25rem 1rem;
     }
     
     .quoteText {
@@ -243,11 +244,11 @@
 
 @media (max-width: 480px) {
     .testimonialsSection {
-        padding: 6vw 3vw;
+        padding: 12vw 3vw 6vw 3vw !important;
     }
     
     .testimonialItem {
-        padding: 2rem 1.5rem;
+        padding: 1rem 0.75rem;
     }
     
     .quoteText {
