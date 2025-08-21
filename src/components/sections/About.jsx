@@ -11,7 +11,7 @@ const About = () => {
                         <TextReveal as="h2" className={styles.aboutHeading}>
                             About Me
                         </TextReveal>
-                        <img src="/Untitled design (5).png" alt="Shri Vikram P" />
+                        <img src="/vikram p.jpg" alt="Shri Vikram P" />
                     </div>
                     <div className={styles.description}>
                         <TextReveal as="h3" className="heading-large mb-medium" delay={0.1}>
