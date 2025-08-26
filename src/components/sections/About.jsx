@@ -11,11 +11,11 @@ const About = () => {
                         <TextReveal as="h2" className={styles.aboutHeading}>
                             About Me
                         </TextReveal>
-                        <img src="/vikram p.jpg" alt="Shri Vikram P" />
+                        <img src="/Vikram profile picture 001[1].png" alt="Vikram P" />
                     </div>
                     <div className={styles.description}>
                         <TextReveal as="h3" className="heading-large mb-medium" delay={0.1}>
-                            I'm Shri Vikram P,
+                            Mr Vikram P,
                         </TextReveal>
                         <TextReveal as="p" className="text-body mb-medium" delay={0.2}>
                             known as VikramVKR, is a financial architect with a strong background in investment banking and strategic advisory. He works closely with founders, family businesses, and early-stage ventures to build structured, financially resilient organizations. Currently, he continues to advise business leaders, boards, and stakeholders- supporting responsible growth, improved financial governance, and inclusive economic development.
@@ -57,7 +57,7 @@ const About = () => {
                             </div>
                         </div>
                         <div className={styles.skillsImage}>
-                            <img src="/1.png" alt="Business Advisory Meeting" />
+                            <img src="/6.png" alt="Business Advisory Meeting" />
                         </div>
                     </div>
                 </div>

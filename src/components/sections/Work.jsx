@@ -40,7 +40,7 @@ const Work = () => {
     return (
         <section id="work" className={`section ${styles.workSection}`}>
             <div className={styles.content}>
-                <TextReveal as="h2" className="heading-large mb-large">
+                <TextReveal as="h2" className="heading-large mb-medium">
                     Advisory Services
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>

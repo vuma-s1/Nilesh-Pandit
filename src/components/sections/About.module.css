@@ -24,12 +24,13 @@
     overflow: visible;
     border-radius: 12px;
     padding-top: 2rem;
+    padding-left: 2rem;
 }
 
 .aboutHeading {
     position: absolute;
     top: -6rem;
-    right: 2rem;
+    right: 1rem;
     z-index: 2;
     margin: 0;
     font-family: var(--font-heading);
@@ -46,6 +47,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    margin: 0 auto;
 }
 
 .description {
@@ -87,6 +89,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transform: scale(0.9);
     transition: transform 0.3s ease;
 }
 
@@ -158,6 +161,9 @@
     
     .aboutImage {
         height: 300px;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
     }
     
     .aboutHeading {
@@ -219,6 +225,9 @@
     
     .aboutImage {
         height: 250px;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
     }
     
     .aboutHeading {

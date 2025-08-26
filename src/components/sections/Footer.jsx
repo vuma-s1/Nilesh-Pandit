@@ -79,7 +79,7 @@ const Footer = ({ openCalendly }) => {
                     <div className={styles.centerContent}>
                         <div className={styles.logoName}>
                             <span className={styles.logo}>V</span>
-                            <span className={styles.name}>Shri Vikram P</span>
+                            <span className={styles.name}>Vikram P</span>
                         </div>
                         <div className={styles.miniBio}>
                             Financial Architect & Strategic Advisor helping leaders build resilient, investor-ready businesses.
@@ -99,7 +99,7 @@ const Footer = ({ openCalendly }) => {
                 {/* Bottom row with additional info */}
                 <div className={styles.footerBottom}>
                     <div className={styles.bottomLeft}>
-                        <div className={styles.copyright}>© 2025 Shri Vikram P</div>
+                        <div className={styles.copyright}>© 2025 Vikram P</div>
                         <div className={styles.siteMap}>Site Map</div>
                     </div>
                     <div className={styles.bottomCenter}>

@@ -10,7 +10,7 @@
 
 .header {
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
     padding-top: 3rem;
 }
 
@@ -44,7 +44,7 @@
 .timelineItem {
     display: flex;
     gap: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 

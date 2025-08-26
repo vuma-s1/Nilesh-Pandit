@@ -39,7 +39,7 @@ const Logo = (props) => (
         whiteSpace: 'nowrap'
       }}
     >
-      Shri Vikram P
+      Vikram P
     </div>
   </div>
 );
