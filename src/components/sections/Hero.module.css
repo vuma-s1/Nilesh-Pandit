@@ -1,8 +1,10 @@
 .heroSection {
     align-items: flex-start;
     justify-content: center;
-    padding-bottom: 5vw;
-    position: relative;
+    padding: 8vw 5vw 5vw 5vw;
+    position: static;
+    padding-top: calc(8vw + 80px);
+    min-height: 100vh;
 }
 
 .content {
@@ -43,12 +45,12 @@
 
 @media (max-width: 768px) {
     .heroSection {
-        padding-bottom: 1vw;
-        padding-top: 0.25rem;
+        padding-bottom: 0.5vw;
+        padding-top: calc(2vw + 70px);
     }
     
     .content {
-        margin-top: -0.25rem;
+        margin-top: 0;
     }
     
     .scrollIndicator {

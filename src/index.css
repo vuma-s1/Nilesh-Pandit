@@ -24,9 +24,12 @@
 }
 
 :root {
-    --color-background: #111111;
+    --color-background: #191A1A;
     --color-text: #E4E4E4;
     --color-text-hover: #FFFFFF;
+    --color-gold: #A08B5A;
+    --color-gold-light: #B09A6A;
+    --color-gold-dark: #8A7A4A;
     --font-main: 'Britanica', sans-serif;
     --font-heading: 'Unclare', sans-serif;
     --font-subheading: 'Britanica Regular', sans-serif;
@@ -72,7 +75,13 @@ a {
 
 /* Add padding top to account for fixed navigation */
 .section:first-of-type {
-    padding-top: 0;
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .section:first-of-type {
+        padding-top: 70px;
+    }
 }
 
 /* Typography */
@@ -82,6 +91,7 @@ a {
     font-weight: 400;
     line-height: 0.9;
     letter-spacing: -0.02em;
+    color: var(--color-gold);
 }
 
 .heading-large {
@@ -90,18 +100,21 @@ a {
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: -0.01em;
+    color: var(--color-gold);
 }
 
 /* Global heading styles */
 h1, h2 {
     font-family: var(--font-heading);
     font-weight: 400;
+    color: var(--color-gold);
 }
 
 /* Sub-heading styles */
 h3, h4, h5, h6 {
     font-family: var(--font-subheading);
     font-weight: 400;
+    color: var(--color-text);
 }
 
 /* Global paragraph styles */

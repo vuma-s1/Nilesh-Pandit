@@ -2,7 +2,7 @@ import React from 'react';
 import TextReveal from '../shared/TextReveal';
 import styles from './Media.module.css';
 
-const Media = ({ openCalendly }) => {
+const Media = () => {
     return (
         <section className={`section ${styles.mediaSection}`}>
             <div className={styles.content}>
@@ -16,10 +16,6 @@ const Media = ({ openCalendly }) => {
                 
                 <div className={styles.ctaContainer}>
                     <button 
-                        onClick={() => {
-                            console.log('Media button clicked');
-                            openCalendly();
-                        }}
                         className={`btn btn-primary ${styles.ctaButton}`}
                     >
                     </button>

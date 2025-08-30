@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Logo from '../icons/Logo';
@@ -6,58 +6,47 @@ import styles from './Navigation.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navigation = ({ openCalendly }) => {
-    const navRef = useRef(null);
-    const [activeSection, setActiveSection] = useState('hero');
+const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
+    const navRef = useRef(null);
 
     const navItems = [
-        { name: 'Home', href: '#hero', id: 'hero' },
-        { name: 'About', href: '#about', id: 'about' },
-        { name: 'Services', href: '#services', id: 'services' },
-        { name: 'Experience', href: '#experience', id: 'experience' },
-        { name: 'Work', href: '#work', id: 'work' },
-        { name: 'Contact', href: '#contact', id: 'contact' }
+        { id: 'home', name: 'Home', href: '#home' },
+        { id: 'about', name: 'About', href: '#about' },
+        { id: 'services', name: 'Services', href: '#services' },
+        { id: 'work', name: 'Work', href: '#work' },
+        { id: 'contact', name: 'Contact', href: '#contact' }
     ];
-
-    // Prevent body scroll when mobile menu is open
-    useEffect(() => {
-        if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
-    }, [isMobileMenuOpen]);
 
     useEffect(() => {
         const nav = navRef.current;
         if (!nav) return;
 
-        // Initial animation
-        gsap.fromTo(nav, 
-            { y: -100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: 'expo.out', delay: 2.5 }
-        );
-
-        // Hide/show on scroll
+        // Background animation on scroll
         ScrollTrigger.create({
-            start: 'top -80',
-            end: 99999,
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
             onUpdate: (self) => {
-                if (self.direction === -1) {
-                    gsap.to(nav, { y: 0, duration: 0.3 });
+                if (self.progress > 0.05) {
+                    gsap.to(nav, {
+                        backgroundColor: 'rgba(25, 26, 26, 0.95)',
+                        backdropFilter: 'blur(20px)',
+                        duration: 0.3
+                    });
                 } else {
-                    gsap.to(nav, { y: -100, duration: 0.3 });
+                    gsap.to(nav, {
+                        backgroundColor: 'rgba(25, 26, 26, 0.8)',
+                        backdropFilter: 'blur(20px)',
+                        duration: 0.3
+                    });
                 }
             }
         });
 
         // Active section tracking
-        const sections = document.querySelectorAll('section, header');
+        const sections = document.querySelectorAll('section[id], header[id]');
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -117,7 +106,6 @@ const Navigation = ({ openCalendly }) => {
                 {/* Desktop CTA */}
                 <div className={styles.navCta}>
                     <button 
-                        onClick={openCalendly}
                         className={styles.ctaButton} 
                         data-hoverable
                     >
@@ -153,7 +141,6 @@ const Navigation = ({ openCalendly }) => {
                     ))}
                     <li>
                         <button 
-                            onClick={openCalendly}
                             className={styles.mobileCtaButton}
                         >
                             Let's Talk

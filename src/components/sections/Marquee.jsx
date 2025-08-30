@@ -49,10 +49,10 @@ const Marquee = () => {
   return (
     <section className={styles.marqueeSection}>
       <div className={styles.marqueeContainer}>
-        <h2 className={styles.marqueeHeadline}>Why Leaders Trust Me</h2>
+        <h2 className={styles.marqueeHeadline}>Why Clients Trust Me</h2>
         <div ref={scrollContainerRef} className={styles.marqueeScroll}>
           <div className={styles.marqueeItem}>
-            <span className={styles.marqueeText}>• 15+ Years in Finance & Strategy • 30+ Organizations transformed • ₹250+ Crores facilitated •</span>
+            <span className={styles.marqueeText}>• 18+ Years in Legal Practice • 500+ Cases Successfully Handled • Civil, Criminal & Business Law •</span>
           </div>
         </div>
       </div>

@@ -1,8 +1,9 @@
 .marqueeSection {
   padding: 1.5rem 0 15rem 0;
-  background-color: #111111;
-  color: #E4E4E4;
+  background-color: var(--color-background);
+  color: var(--color-text);
   overflow: hidden;
+  position: static;
 }
 
 .marqueeContainer {
@@ -16,6 +17,7 @@
   margin-bottom: 2rem;
   letter-spacing: -0.02em;
   text-align: center;
+  color: var(--color-gold);
 }
 
 .marqueeScroll {
@@ -52,5 +54,10 @@
   
   .marqueeHeadline {
     margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+  }
+  
+  .marqueeText {
+    font-size: clamp(0.875rem, 0.5rem + 1vw, 1.5rem);
   }
 }

@@ -1,11 +1,13 @@
 .mediaSection {
-    padding: 4.5vw 5vw !important;
-    background-color: #111111;
-    color: #E4E4E4;
+    padding: 4.5vw 5vw 8vw 5vw !important;
+    background-color: var(--color-background);
+    color: var(--color-text);
     min-height: 30vh !important;
+    max-height: 50vh !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .content {
@@ -17,9 +19,9 @@
 
 .headline {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    font-size: clamp(2.25rem, 1.75rem + 3vw, 4rem);
     font-weight: 600;
-    color: var(--color-text-hover);
+    color: var(--color-gold);
     line-height: 1.1;
     margin-bottom: 2rem;
     text-align: center;
@@ -27,7 +29,7 @@
 
 .description {
     font-family: var(--font-main);
-    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+    font-size: clamp(1rem, 0.875rem + 0.5vw, 1.375rem);
     font-weight: 300;
     line-height: 1.6;
     opacity: 0.8;
@@ -51,7 +53,7 @@
     font-size: 1.125rem;
     font-weight: 500;
     padding: 1.5rem 3rem;
-    background-color: var(--color-text-hover) !important;
+    background-color: var(--color-gold) !important;
     color: var(--color-background);
     border: none;
     border-radius: 0.5rem;
@@ -66,14 +68,16 @@
 }
 
 .ctaButton:hover {
-    background-color: #FF6B35 !important;
+    background-color: var(--color-gold-light) !important;
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(146, 122, 89, 0.3);
 }
 
 .ctaButton:hover,
 .ctaButton:focus {
-    background-color: #FF6B35 !important;
+    background-color: var(--color-gold-light) !important;
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(146, 122, 89, 0.3);
 }
 
 .ctaButton::before {

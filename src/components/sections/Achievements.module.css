@@ -1,0 +1,135 @@
+.achievementsSection {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12vw 5vw 5vw 5vw;
+    position: relative;
+    background-color: var(--color-background);
+    margin-top: 2rem;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    margin-top: 0.25rem;
+    max-width: 600px;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.achievementsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.achievementCard {
+    background: rgba(228, 228, 228, 0.02);
+    border: 1px solid rgba(228, 228, 228, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievementCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievementCard:hover {
+    background: rgba(228, 228, 228, 0.05);
+    border-color: rgba(228, 228, 228, 0.2);
+    transform: translateY(-4px);
+}
+
+.achievementCard:hover::before {
+    opacity: 1;
+}
+
+.achievementNumber {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.achievementTitle {
+    font-family: var(--font-subheading);
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.achievementDescription {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievementsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 600px;
+    }
+    
+    .achievementCard {
+        padding: 1.5rem;
+    }
+    
+    .achievementNumber {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+    
+    .achievementTitle {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+    
+    .achievementDescription {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievementsGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .achievementCard {
+        padding: 1.25rem;
+    }
+    
+    .achievementNumber {
+        font-size: 2rem;
+    }
+    
+    .achievementTitle {
+        font-size: 1.1rem;
+    }
+}

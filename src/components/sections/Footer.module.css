@@ -1,15 +1,15 @@
 .footer {
-    background-color: #f7f7f7;
-    color: #000000;
+    background-color: var(--color-background);
+    color: var(--color-text);
     padding: 2rem 5vw 1.5rem;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--color-gold);
 }
 
 .footerContent {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    color: #000000;
+    color: var(--color-text);
 }
 
 /* Hero section styles */
@@ -17,14 +17,14 @@
     text-align: center;
     margin-bottom: 2rem;
     padding: 1.5rem 0;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .heroHeadline {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.75rem, 4.5vw, 3.5rem);
     font-weight: 700;
-    color: #000000;
+    color: var(--color-gold);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     max-width: 800px;
@@ -38,38 +38,34 @@
     display: inline-block;
     overflow: hidden;
     border-radius: 0;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .ctaButton {
-    background-color: #000000;
-    color: #ffffff;
+    background: var(--color-gold);
+    color: var(--color-background);
     border: none;
-    padding: 1.75rem 1.5rem;
+    border-radius: 8px;
+    padding: 1rem 2rem;
     font-family: var(--font-main);
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    min-width: 220px;
-    max-width: 280px;
-    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .ctaButton:hover {
-    background-color: #333333;
+    background: var(--color-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(146, 122, 89, 0.3);
 }
 
 .marqueeContainer {
     overflow: hidden;
     flex: 1;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .marqueeText {
@@ -83,14 +79,14 @@
 .buttonText {
     font-size: 1.125rem;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--color-background);
 }
 
 .globeIcon {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 @keyframes marqueeScroll {
@@ -119,17 +115,18 @@
 }
 
 .socialLink {
-    color: #000000;
+    color: var(--color-gold);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 400;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
 }
 
 .socialLink:hover {
-    opacity: 0.8;
+    color: var(--color-gold-light);
+    transform: translateY(-1px);
 }
 
 /* Center column - Logo and Name */
@@ -150,21 +147,21 @@
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .name {
     font-family: var(--font-main);
     font-size: 0.875rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .miniBio {
     font-family: var(--font-main);
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
     line-height: 1.4;
     max-width: 300px;
     margin: 0 auto;
@@ -180,7 +177,7 @@
 }
 
 .navLink {
-    color: #000000;
+    color: var(--color-text);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 400;
@@ -197,7 +194,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--color-gold);
 }
 
 .bottomLeft {
@@ -209,13 +206,13 @@
 .copyright {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .siteMap {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .bottomCenter {
@@ -229,7 +226,7 @@
 .address {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
     text-align: center;
 }
 
@@ -249,17 +246,21 @@
 .email {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .phone {
     font-size: 0.75rem;
     font-weight: 400;
-    color: #000000;
+    color: var(--color-text);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .footer {
+        padding: 2rem 4vw 1.5rem;
+    }
+    
     .heroHeadline {
         font-size: 2.5rem;
         font-weight: 700;
@@ -386,14 +387,6 @@
     
     .name {
         font-size: 0.8rem;
-    }
-    
-    .socialLinks {
-        gap: 1rem;
-    }
-    
-    .navigation {
-        gap: 1.5rem;
     }
 }
 

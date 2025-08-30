@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 
-const Footer = ({ openCalendly }) => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
@@ -12,40 +12,40 @@ const Footer = ({ openCalendly }) => {
                         out of this world together
                     </h1>
                     <div className={styles.buttonContainer}>
-                        <button onClick={openCalendly} className={styles.ctaButton}>
+                        <button className={styles.ctaButton}>
                             <div className={styles.marqueeContainer}>
                                 <div className={styles.marqueeText}>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
-                                    <span className={styles.buttonText}>Book a call</span>
+                                    <span className={styles.buttonText}>Schedule a Consultation</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className={styles.globeIcon}>
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                     </svg>
                                 </div>
-                                                    </div>
-                    </button>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
@@ -78,11 +78,11 @@ const Footer = ({ openCalendly }) => {
                     {/* Center column - Name/Logo */}
                     <div className={styles.centerContent}>
                         <div className={styles.logoName}>
-                            <span className={styles.logo}>V</span>
-                            <span className={styles.name}>Vikram P</span>
+                            <span className={styles.logo}>N</span>
+                            <span className={styles.name}>Nilesh Pandit</span>
                         </div>
                         <div className={styles.miniBio}>
-                            Financial Architect & Strategic Advisor helping leaders build resilient, investor-ready businesses.
+                            Advocate & Legal Strategist helping individuals and businesses with comprehensive legal services in civil, criminal, and business law.
                         </div>
                     </div>
 
@@ -99,18 +99,18 @@ const Footer = ({ openCalendly }) => {
                 {/* Bottom row with additional info */}
                 <div className={styles.footerBottom}>
                     <div className={styles.bottomLeft}>
-                        <div className={styles.copyright}>© 2025 Vikram P</div>
+                        <div className={styles.copyright}>© 2025 Nilesh Pandit</div>
                         <div className={styles.siteMap}>Site Map</div>
                     </div>
                     <div className={styles.bottomCenter}>
-                        <div className={styles.address}>Milk Colony, Rajajinagar,</div>
-                        <div className={styles.address}>Bengaluru, India</div>
+                        <div className={styles.address}>Mumbai Metropolitan Region,</div>
+                        <div className={styles.address}>Maharashtra, India</div>
                     </div>
                     <div className={styles.bottomRight}>
-                        <div className={styles.contact}>
-                            <div className={styles.email}>vikram@financialarchitect.com</div>
-                            <div className={styles.phone}>+91 98765 43210</div>
-                    </div>
+                        <div className={styles.contactInfo}>
+                            <div className={styles.contactItem}>nilesh@anjuris.com</div>
+                            <div className={styles.contactItem}>+91 98450 12345</div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -56,14 +56,14 @@
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.6;
-    color: #E4E4E4;
+    color: var(--color-text);
     margin: 0;
     opacity: 0.9;
 }
 
 .cardContent strong {
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--color-text-hover);
     opacity: 1;
 }
 

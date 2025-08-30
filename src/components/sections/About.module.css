@@ -38,7 +38,7 @@
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.02em;
-    color: var(--color-text);
+    color: var(--color-gold);
     text-align: right;
 }
 
@@ -176,6 +176,7 @@
     
     .description {
         max-width: 100%;
+        text-align: center;
     }
     
     .skills {
@@ -195,6 +196,7 @@
     .skillsTitle {
         font-size: 1.25rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
     
     .skill {
@@ -253,5 +255,13 @@
     
     .skillItem strong {
         margin-right: 0;
+    }
+    
+    .description {
+        text-align: center;
+    }
+    
+    .skillsTitle {
+        text-align: center;
     }
 }

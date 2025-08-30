@@ -6,32 +6,32 @@ import styles from './Work.module.css';
 const Work = () => {
     const projects = [
         {
-            title: "Business Structuring & Governance",
-            category: "Transition from informal to professionally managed",
+            title: "Patent Strategy & Prosecution",
+            category: "Drafting, filing, and defending patents",
             image: "/1.png",
             link: "#"
         },
         {
-            title: "Mentorship for Founders & First-Generation Entrepreneurs ",
-            category: " Strategic direction to scale confidently",
+            title: "IP Portfolio Management",
+            category: "Structuring and aligning IP with business goals",
             image: "/2.png",
             link: "#"
         },
         {
-            title: "Investor Readiness & Capital Access",
-            category: "From collateral facilitation to investor trust-building",
+            title: "Legal Risk Mitigation",
+            category: "Confidentiality, compliance frameworks, and dispute prevention",
             image: "/3.png",
             link: "#"
         },
         {
-            title: "Growth Advisory ",
-            category: "Scale-up strategies, governance improvements, and risk management",
+            title: "Cross-Functional Leadership",
+            category: "Managing global IP teams and stakeholder communication",
             image: "/4.png",
             link: "#"
         },
         {
-            title: "Financial Inclusion Support ",
-            category: "Helping businesses with growth potential access the resources they need",
+            title: "Research-Driven Insight",
+            category: "Strong foundation in science and technology for IP evaluation",
             image: "/5.png",
             link: "#"
         }
@@ -41,10 +41,10 @@ const Work = () => {
         <section id="work" className={`section ${styles.workSection}`}>
             <div className={styles.content}>
                 <TextReveal as="h2" className="heading-large mb-medium">
-                    Advisory Services
+                    Core Expertise
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                    How I Help Leaders Win Long-Term
+                    Specialized Skills in Intellectual Property & Technology Law
                 </TextReveal>
                 <div className={styles.projectsList}>
                     {projects.map((project, index) => (

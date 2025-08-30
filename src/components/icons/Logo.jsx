@@ -12,7 +12,7 @@ const Logo = (props) => (
     }}
     {...props}
   >
-    {/* Stylized "V" icon */}
+    {/* Stylized "N" icon */}
     <div
       style={{
         display: 'flex',
@@ -25,7 +25,7 @@ const Logo = (props) => (
         flexShrink: 0
       }}
     >
-      V
+      N
     </div>
     
     {/* Name text */}
@@ -39,7 +39,7 @@ const Logo = (props) => (
         whiteSpace: 'nowrap'
       }}
     >
-      Vikram P
+      Nilesh Pandit
     </div>
   </div>
 );
