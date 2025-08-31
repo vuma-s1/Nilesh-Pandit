@@ -80,25 +80,6 @@
     box-shadow: 0 8px 25px rgba(146, 122, 89, 0.3);
 }
 
-.ctaButton::before {
-    content: "Invite Me to Speak • Invite Me to Speak • Invite Me to Speak • Invite Me to Speak";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    white-space: nowrap;
-    animation: scrollText 5s linear infinite;
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateY(-50%) translateX(0);
-    }
-    100% {
-        transform: translateY(-50%) translateX(-50%);
-    }
-}
-
 @media (max-width: 768px) {
     .mediaSection {
         padding: 3.5vw 4vw !important;

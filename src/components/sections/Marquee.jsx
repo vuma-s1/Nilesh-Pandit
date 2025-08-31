@@ -49,10 +49,10 @@ const Marquee = () => {
   return (
     <section className={styles.marqueeSection}>
       <div className={styles.marqueeContainer}>
-        <h2 className={styles.marqueeHeadline}>Why Clients Trust Me</h2>
+        <h2 className={styles.marqueeHeadline}>Why Startups Choose VNX Lexicon</h2>
         <div ref={scrollContainerRef} className={styles.marqueeScroll}>
           <div className={styles.marqueeItem}>
-            <span className={styles.marqueeText}>• 18+ Years in Legal Practice • 500+ Cases Successfully Handled • Civil, Criminal & Business Law •</span>
+            <span className={styles.marqueeText}>• Trusted by 50+ Startups & Investors Globally • 18+ Years Combined Legal & Strategic Expertise • Secured IP & Contracts for Dozens of High-Growth Ventures • Guiding Startups from Incorporation to Successful Exit •</span>
           </div>
         </div>
       </div>

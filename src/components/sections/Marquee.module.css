@@ -54,10 +54,17 @@
   
   .marqueeHeadline {
     margin-bottom: 1.5rem;
-    font-size: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+    font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem);
   }
   
   .marqueeText {
     font-size: clamp(0.875rem, 0.5rem + 1vw, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .marqueeHeadline {
+    font-size: clamp(1.25rem, 0.875rem + 1.25vw, 2rem);
+    margin-bottom: 1rem;
   }
 }

@@ -6,20 +6,31 @@ const About = () => {
     return (
         <section id="about" className={`section ${styles.aboutSection}`}>
             <div className={styles.content}>
-                <div className={styles.aboutGrid}>
-                    <div className={styles.aboutImage}>
-                        <TextReveal as="h2" className={styles.aboutHeading}>
-                            About Me
-                        </TextReveal>
-                        <img src="/nilesh.png" alt="Mr Nilesh Pandit" />
-                    </div>
+                <div className={styles.aboutContainer}>
+                    <TextReveal as="h2" className={styles.aboutHeading}>
+                        Our Story
+                    </TextReveal>
+                    
                     <div className={styles.description}>
                         <TextReveal as="h3" className="heading-large mb-medium" delay={0.1}>
-                            Mr Nilesh Pandit,
+                            VNX Lexicon
                         </TextReveal>
                         <TextReveal as="p" className="text-body mb-medium" delay={0.2}>
-                            Senior Manager – IPR (Patents) at Tata Consultancy Services and Registered Indian Patent Attorney with nearly two decades of experience in intellectual property law, technology, and business innovation. I have led cross-border teams in building and protecting IP portfolios for global enterprises, ensuring compliance and mitigating legal risks. My expertise spans corporate IP leadership, research institutions, and law practice, providing a comprehensive view of the innovation ecosystem.
+                            VNX Lexicon was born from a fundamental belief: that groundbreaking startups deserve legal and strategic guidance that is as agile and forward-thinking as they are. Too many founders are overwhelmed by legal jargon and compliance hurdles, diverting precious energy from their core mission. Our mission became clear: to demystify the legal landscape, empower founders with unwavering protection, and instill the confidence needed to turn audacious visions into reality.
                         </TextReveal>
+                    </div>
+                    
+                    <TextReveal as="div" className="text-body" delay={0.3}>
+                        <h4 className="heading-medium mb-small">Our Values:</h4>
+                    </TextReveal>
+                    
+                    <div className={styles.valuesContainer}>
+                        <ul className={styles.valuesList}>
+                            <li><strong>Integrity:</strong> Ethical counsel and transparency.</li>
+                            <li><strong>Clarity:</strong> Translating complex law into actionable insights.</li>
+                            <li><strong>Innovation:</strong> Proactive, future-focused solutions.</li>
+                            <li><strong>Partnership:</strong> Deeply invested in your journey, celebrating milestones together.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

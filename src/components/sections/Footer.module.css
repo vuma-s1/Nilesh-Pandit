@@ -86,7 +86,7 @@
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    color: var(--color-text);
+    color: #000;
 }
 
 @keyframes marqueeScroll {

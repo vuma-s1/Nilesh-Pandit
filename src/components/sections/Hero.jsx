@@ -12,12 +12,12 @@ const Hero = () => {
                     letterSpacing: '-0.02em',
                     marginBottom: '1rem'
                 }}>
-                    Transforming Innovation<br/>
-                    <span style={{ display: 'block', marginTop: '0.8rem' }}>into Strategic Intellectual</span>
-                    <span style={{ display: 'block', marginTop: '0.8rem' }}>Property</span>
+                    Build Your Startup's Future.<br/>
+                    <span style={{ display: 'block', marginTop: '0.8rem' }}>Legally Sound,</span>
+                    <span style={{ display: 'block', marginTop: '0.8rem' }}>Strategically Brilliant.</span>
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.3}>
-                    Guiding organizations in protecting, structuring, and leveraging their ideas with 18+ years of global IP leadership.
+                    From your first pitch to your triumphant exit, VNX Lexicon provides expert legal and strategic foresight to protect your vision, attract investors, and scale without limits.
                 </TextReveal>
             </div>
 

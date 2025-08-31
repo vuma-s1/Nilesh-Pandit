@@ -12,23 +12,21 @@ const Logo = (props) => (
     }}
     {...props}
   >
-    {/* Stylized "N" icon */}
+    {/* VNX - Highlighted */}
     <div
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         fontSize: 'clamp(0.9rem, 0.7rem + 0.5vw, 1.2rem)',
         fontWeight: '700',
         fontFamily: 'var(--font-heading)',
         letterSpacing: '0.05em',
+        color: 'var(--color-gold)',
         flexShrink: 0
       }}
     >
-      N
+      VNX
     </div>
     
-    {/* Name text */}
+    {/* Lexicon - Regular styling */}
     <div
       style={{
         fontSize: 'clamp(0.8rem, 0.6rem + 0.8vw, 1rem)',
@@ -39,7 +37,7 @@ const Logo = (props) => (
         whiteSpace: 'nowrap'
       }}
     >
-      Nilesh Pandit
+      Lexicon
     </div>
   </div>
 );

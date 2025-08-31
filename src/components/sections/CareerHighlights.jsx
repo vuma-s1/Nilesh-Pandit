@@ -3,76 +3,88 @@ import TextReveal from '../shared/TextReveal';
 import styles from './CareerHighlights.module.css';
 
 const CareerHighlights = () => {
-    const careerItems = [
+    const partners = [
         {
-            period: '2012 – Present',
-            company: 'Tata Consultancy Services (TCS)',
-            role: 'Senior Manager – IPR (Patents)',
-            description: 'Leads corporate patent strategy, risk management, and IP compliance. Advises on global patent filings and enforcement. Manages multi-disciplinary teams across geographies.',
-            type: 'current'
+            name: "Advocate Nilesh S. Pandith",
+            role: "Senior Partner & IP Strategist",
+            image: "/nilesh.png", // Updated to use actual image
+            expertise: "18+ Years in IP Law & Strategy",
+            highlights: "Leading corporate patent strategy, risk management, and IP compliance. Advises on global patent filings and enforcement.",
+            type: "current"
         },
         {
-            period: 'Earlier Roles',
-            company: 'CSIR–National Chemical Laboratory (Pune) & National Institute of Oceanography (Goa)',
-            role: 'Research-based IP work',
-            description: 'Exposure to applied science, innovation processes, and patentability analysis.',
-            type: 'previous'
-        },
-        {
-            period: 'Education',
-            company: 'Academic & Professional Credentials',
-            role: 'M.Sc. Microbiology – North Maharashtra University | LL.B. – Pune University | Registered Indian Patent Attorney – Indian Patent Office',
-            description: 'Comprehensive academic foundation in science and law, combined with professional certification in patent law.',
-            type: 'education'
+            name: "Shri Vikram P (VikramVKR)",
+            role: "Strategic Partner & Business Mentor",
+            image: "/vikram.png", // Updated to use actual image
+            expertise: "15+ Years in Investment Banking",
+            highlights: "Expert in investment banking, startup advisory, and strategic planning. Guides startups through funding rounds.",
+            type: "current"
         }
     ];
 
+    const handleViewMore = () => {
+        // This will be replaced with actual navigation when we create the Partners page
+        window.location.href = '/partners';
+    };
+
     return (
-        <section id="services" className={`section ${styles.careerSection}`}>
+        <section id="partners" className={`section ${styles.careerSection}`}>
             <div className={styles.content}>
                 <TextReveal as="h2" className="heading-large mb-medium">
-                    Career Highlights
+                    Our Partners
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                    Professional Journey in Intellectual Property & Technology Law
+                    Meet the team behind VNX Lexicon's success
                 </TextReveal>
                 
-                <div className={styles.careerGrid}>
-                    {careerItems.map((item, index) => (
+                <div className={styles.partnersGrid}>
+                    {partners.map((partner, index) => (
                         <TextReveal 
                             key={index}
                             as="div" 
-                            className={`${styles.careerCard} ${styles[item.type]}`}
+                            className={`${styles.partnerCard} ${styles[partner.type]}`}
                             delay={index * 0.2}
                         >
-                            <div className={styles.cardHeader}>
-                                <div className={styles.periodBadge}>
-                                    {item.period}
+                            <div className={styles.partnerImage}>
+                                <img 
+                                    src={partner.image} 
+                                    alt={partner.name}
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'flex';
+                                    }}
+                                />
+                                <div className={styles.imagePlaceholder}>
+                                    {partner.name.split(' ').map(n => n[0]).join('')}
                                 </div>
-                                <h3 className={styles.companyName}>
-                                    {item.company}
+                            </div>
+                            
+                            <div className={styles.partnerInfo}>
+                                <h3 className={styles.partnerName}>
+                                    {partner.name}
                                 </h3>
-                            </div>
-                            
-                            <div className={styles.cardContent}>
-                                <h4 className={styles.roleTitle}>
-                                    {item.role}
+                                <h4 className={styles.partnerRole}>
+                                    {partner.role}
                                 </h4>
-                                <p className={styles.roleDescription}>
-                                    {item.description}
-                                </p>
-                            </div>
-                            
-                            <div className={styles.cardFooter}>
-                                <div className={styles.typeIndicator}>
-                                    {item.type === 'current' && 'Current Position'}
-                                    {item.type === 'previous' && 'Previous Experience'}
-                                    {item.type === 'education' && 'Education & Credentials'}
+                                <div className={styles.partnerExpertise}>
+                                    {partner.expertise}
                                 </div>
+                                <p className={styles.partnerHighlights}>
+                                    {partner.highlights}
+                                </p>
                             </div>
                         </TextReveal>
                     ))}
                 </div>
+
+                <TextReveal as="div" className={styles.viewMoreContainer} delay={0.6}>
+                    <button 
+                        className={styles.viewMoreButton}
+                        onClick={handleViewMore}
+                    >
+                        View Full Partner Profiles
+                    </button>
+                </TextReveal>
             </div>
         </section>
     );

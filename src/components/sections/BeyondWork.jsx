@@ -11,7 +11,7 @@ const BeyondWork = () => {
                 </svg>
             ),
             title: "Cricket",
-            description: "Whether on the cricket pitch, capturing moments through a lens, or immersed in music, he finds balance and creativity that enrich his leadership style."
+            description: "Active participation and team engagement, fostering leadership and strategic thinking that translates into our client relationships."
         },
         {
             icon: (
@@ -66,9 +66,9 @@ const BeyondWork = () => {
                 
                 <TextReveal as="div" className={styles.personalNote} delay={0.8}>
                     <p className={styles.noteText}>
-                        Outside his professional pursuits, Nilesh is deeply passionate about sports, music, and photography. 
+                        At VNX Lexicon, we believe that personal passions enrich professional expertise. 
                         Whether on the cricket pitch, capturing moments through a lens, or immersed in music, 
-                        he finds balance and creativity that enrich his leadership style.
+                        our team finds balance and creativity that enhance our strategic approach to startup legal services.
                     </p>
                 </TextReveal>
             </div>
@@ -77,4 +77,5 @@ const BeyondWork = () => {
 };
 
 export default BeyondWork;
+
 

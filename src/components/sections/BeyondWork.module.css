@@ -1,14 +1,14 @@
 .beyondWorkSection {
     align-items: flex-start;
     justify-content: center;
-    padding: 15vw 5vw 5vw 5vw;
+    padding: 12vw 5vw 5vw 5vw;
     position: relative;
     background-color: var(--color-background);
     margin-top: 2rem;
 }
 
 .content {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,28 +16,28 @@
 }
 
 .subtitle {
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     max-width: 600px;
     opacity: 0.8;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 .interestsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     width: 100%;
-    max-width: 900px;
-    margin-bottom: 4rem;
+    max-width: 1000px;
+    margin-bottom: 3rem;
     justify-content: center;
 }
 
 .interestCard {
-    background: rgba(228, 228, 228, 0.03);
-    border: 1px solid rgba(228, 228, 228, 0.1);
-    border-radius: 16px;
-    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
     transition: all 0.4s ease;
     text-align: center;
     position: relative;
@@ -50,16 +50,17 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+    height: 2px;
+    background: var(--color-gold);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .interestCard:hover {
-    background: rgba(228, 228, 228, 0.06);
-    border-color: rgba(228, 228, 228, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 215, 0, 0.3);
     transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 .interestCard:hover::before {
@@ -67,10 +68,10 @@
 }
 
 .interestIcon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     background: transparent;
-    border-radius: 16px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,8 +88,8 @@
 
 .interestTitle {
     font-family: var(--font-heading);
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-    font-weight: 400;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-weight: 500;
     color: var(--color-text);
     margin: 0 0 1rem 0;
     line-height: 1.2;
@@ -96,9 +97,9 @@
 
 .interestDescription {
     font-family: var(--font-main);
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
     color: var(--color-text);
     opacity: 0.8;
     margin: 0;
@@ -107,30 +108,30 @@
 .personalNote {
     max-width: 800px;
     text-align: center;
-    padding: 3rem;
-    background: rgba(228, 228, 228, 0.02);
-    border: 1px solid rgba(228, 228, 228, 0.08);
-    border-radius: 16px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
     position: relative;
 }
 
 .personalNote::before {
     content: '"';
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-gold);
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .noteText {
     font-family: var(--font-main);
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
     color: var(--color-text);
     opacity: 0.9;
     margin: 0;
@@ -138,15 +139,23 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .interestsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        max-width: 900px;
+    }
+}
+
 @media (max-width: 768px) {
     .interestsGrid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        max-width: 500px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 600px;
     }
     
     .interestCard {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     
     .personalNote {
@@ -155,43 +164,12 @@
     }
     
     .interestIcon {
-        width: 56px;
-        height: 56px;
-    }
-    
-    .interestTitle {
-        font-size: clamp(1.1rem, 4vw, 1.4rem);
-    }
-    
-    .interestDescription {
-        font-size: 0.9rem;
-    }
-    
-    .noteText {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .interestsGrid {
-        max-width: 400px;
-    }
-    
-    .interestCard {
-        padding: 1.5rem;
-    }
-    
-    .personalNote {
-        padding: 1.5rem;
-    }
-    
-    .interestIcon {
         width: 48px;
         height: 48px;
     }
     
     .interestTitle {
-        font-size: 1.2rem;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
     }
     
     .interestDescription {
@@ -200,5 +178,38 @@
     
     .noteText {
         font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interestsGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 1.25rem;
+    }
+    
+    .interestCard {
+        padding: 1.25rem;
+    }
+    
+    .personalNote {
+        padding: 1.5rem;
+    }
+    
+    .interestIcon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .interestTitle {
+        font-size: 1.1rem;
+    }
+    
+    .interestDescription {
+        font-size: 0.8rem;
+    }
+    
+    .noteText {
+        font-size: 0.9rem;
     }
 }

@@ -1,0 +1,438 @@
+.partnersPage {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    padding: 8rem 5vw 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(146, 122, 89, 0.05) 0%, transparent 100%);
+}
+
+.headerContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--font-subheading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.backButton:hover {
+    opacity: 1;
+    transform: translateX(-5px);
+}
+
+.pageTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.pageSubtitle {
+    font-family: var(--font-main);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Main Content */
+.main {
+    padding: 2rem 5vw 6rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partnerSection {
+    margin-bottom: 6rem;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(146, 122, 89, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.partnerSection:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(146, 122, 89, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner Header */
+.partnerHeader {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(146, 122, 89, 0.1);
+}
+
+.partnerImageContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid rgba(146, 122, 89, 0.3);
+    flex-shrink: 0;
+}
+
+.partnerImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%; /* Better positioning for portrait photos */
+}
+
+.imagePlaceholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(146, 122, 89, 0.8), rgba(146, 122, 89, 0.6));
+    color: #000;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.partnerInfo {
+    flex: 1;
+}
+
+.partnerName {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.partnerRole {
+    font-family: var(--font-subheading);
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-weight: 500;
+    color: rgba(146, 122, 89, 0.9);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.partnerBadges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.expertiseBadge, .experienceBadge {
+    background: rgba(146, 122, 89, 0.1);
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: var(--font-subheading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(146, 122, 89, 0.2);
+}
+
+/* Partner Content */
+.partnerContent {
+    margin-top: 2rem;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contentSection {
+    background: rgba(255, 255, 255, 0.01);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(146, 122, 89, 0.05);
+}
+
+.sectionTitle {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.backgroundText {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+.expertiseList, .achievementsList, .educationList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertiseList li, .achievementsList li, .educationList li {
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.expertiseList li::before, .achievementsList li::before, .educationList li::before {
+    content: '•';
+    color: var(--color-gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contactLink {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contactLink:hover {
+    opacity: 0.8;
+    transform: translateX(5px);
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(180deg, transparent 0%, rgba(146, 122, 89, 0.05) 100%);
+    padding: 4rem 5vw;
+    text-align: center;
+}
+
+.ctaContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.ctaText {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primaryButton, .secondaryButton {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: var(--font-subheading);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.primaryButton {
+    background: var(--color-gold);
+    color: #000;
+    border: 2px solid var(--color-gold);
+}
+
+.primaryButton:hover {
+    background: var(--color-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(146, 122, 89, 0.3);
+}
+
+.secondaryButton {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid rgba(146, 122, 89, 0.3);
+}
+
+.secondaryButton:hover {
+    background: rgba(146, 122, 89, 0.1);
+    border-color: rgba(146, 122, 89, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 6rem 4vw 3rem;
+    }
+    
+    .main {
+        padding: 1rem 4vw 4rem;
+    }
+    
+    .partnerSection {
+        padding: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .partnerHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .partnerImageContainer {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .imagePlaceholder {
+        font-size: 2.5rem;
+    }
+    
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contentSection {
+        padding: 1.25rem;
+    }
+    
+    .ctaSection {
+        padding: 3rem 4vw;
+    }
+    
+    .ctaButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primaryButton, .secondaryButton {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5rem 3vw 2rem;
+    }
+    
+    .main {
+        padding: 1rem 3vw 3rem;
+    }
+    
+    .partnerSection {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .partnerImageContainer {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .imagePlaceholder {
+        font-size: 2rem;
+    }
+    
+    .partnerName {
+        font-size: 1.8rem;
+    }
+    
+    .partnerRole {
+        font-size: 1.1rem;
+    }
+    
+    .partnerBadges {
+        justify-content: center;
+    }
+    
+    .expertiseBadge, .experienceBadge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .contentSection {
+        padding: 1rem;
+    }
+    
+    .sectionTitle {
+        font-size: 1rem;
+    }
+    
+    .backgroundText, .expertiseList li, .achievementsList li, .educationList li {
+        font-size: 0.85rem;
+    }
+    
+    .ctaSection {
+        padding: 2rem 3vw;
+    }
+    
+    .ctaTitle {
+        font-size: 1.6rem;
+    }
+    
+    .ctaText {
+        font-size: 1rem;
+    }
+}

@@ -12,10 +12,7 @@ import CareerHighlights from './components/sections/CareerHighlights';
 import Achievements from './components/sections/Achievements';
 import BeyondWork from './components/sections/BeyondWork';
 import Contact from './components/sections/Contact';
-import NewSection from './components/sections/NewSection';
-import Testimonials from './components/sections/Testimonials';
 import Media from './components/sections/Media';
-import Engagement from './components/sections/Engagement';
 import Footer from './components/sections/Footer';
 
 function App() {
@@ -55,10 +52,7 @@ function App() {
                     <Achievements />
                     <BeyondWork />
                     <Contact />
-                    <NewSection />
-                    <Testimonials />
                     <Media />
-                    <Engagement />
                     <Footer />
                 </main>
             </Layout>

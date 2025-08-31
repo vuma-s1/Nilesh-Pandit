@@ -7,10 +7,10 @@ const Contact = () => {
         <section id="contact" className={`section ${styles.contactSection}`}>
             <div className={styles.content}>
                 <TextReveal as="h2" className="heading-large mb-medium">
-                    Let's Connect
+                    Ready to Protect and Scale Your Startup?
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                    Ready to discuss IP strategy and innovation opportunities?
+                    Unlock Your Startup's Potential – Consult Now
                 </TextReveal>
                 
                 <div className={styles.contactGrid}>
@@ -22,7 +22,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <h3 className={styles.contactTitle}>Email</h3>
-                            <p className={styles.contactDetail}>nilesh@anjuris.com</p>
+                            <p className={styles.contactDetail}>support@vnxlexicon.com</p>
                         </div>
                     </div>
                     
@@ -50,6 +50,10 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+                
+                <TextReveal as="p" className={`text-body ${styles.contactNote}`} delay={0.4}>
+                    Your information is 100% confidential. No obligation, just expert guidance.
+                </TextReveal>
             </div>
         </section>
     );

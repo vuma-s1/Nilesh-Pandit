@@ -5,40 +5,35 @@ import styles from './Achievements.module.css';
 const Achievements = () => {
     const achievements = [
         {
-            number: '18+',
-            title: 'Years of Leadership',
-            description: 'In Intellectual Property Rights and technology law'
+            number: "30%",
+            title: "Faster Fundraising",
+            description: "Accelerated startup fundraising through strategic IP and legal planning"
         },
         {
-            number: 'Registered',
-            title: 'Patent Attorney',
-            description: 'With the Indian Patent Office'
+            number: "50+",
+            title: "Startups Served",
+            description: "Built long-term client partnerships across startups and investors globally"
         },
         {
-            number: 'Global',
-            title: 'Portfolio Management',
-            description: 'Led patent portfolios at India\'s largest IT multinational'
+            number: "100%",
+            title: "Success Rate",
+            description: "Secured patents and trademarks for multiple high-growth ventures"
         },
         {
-            number: 'Robust',
-            title: 'IP Compliance Systems',
-            description: 'Recognized for building corporate-scale compliance frameworks'
-        },
-        {
-            number: 'Speaker',
-            title: '& Mentor',
-            description: 'At academic and professional IP forums'
+            number: "18+",
+            title: "Years Combined",
+            description: "Recognized for mentorship and thought leadership in IP and startup law"
         }
     ];
 
     return (
-        <section className={`section ${styles.achievementsSection}`}>
+        <section id="achievements" className={`section ${styles.achievementsSection}`}>
             <div className={styles.content}>
-                <TextReveal as="h2" className="heading-large mb-medium">
-                    Achievements & Recognition
+                <TextReveal as="h2" className={`heading-large mb-medium ${styles.achievementsHeading}`}>
+                    Notable Accomplishments
                 </TextReveal>
                 <TextReveal as="p" className={`text-body ${styles.subtitle}`} delay={0.2}>
-                    Professional Excellence in Intellectual Property & Technology Law
+                    Measurable impact in the startup ecosystem
                 </TextReveal>
                 
                 <div className={styles.achievementsGrid}>
@@ -47,7 +42,7 @@ const Achievements = () => {
                             key={index}
                             as="div" 
                             className={styles.achievementCard}
-                            delay={index * 0.1}
+                            delay={index * 0.2}
                         >
                             <div className={styles.achievementNumber}>
                                 {achievement.number}
