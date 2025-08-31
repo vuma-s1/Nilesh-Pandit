@@ -5,19 +5,19 @@ import styles from './CareerHighlights.module.css';
 const CareerHighlights = () => {
     const partners = [
         {
-            name: "Advocate Nilesh S. Pandith",
-            role: "Senior Partner & IP Strategist",
-            image: "/nilesh.png", // Updated to use actual image
-            expertise: "18+ Years in IP Law & Strategy",
-            highlights: "Leading corporate patent strategy, risk management, and IP compliance. Advises on global patent filings and enforcement.",
-            type: "current"
-        },
-        {
             name: "Shri Vikram P (VikramVKR)",
             role: "Strategic Partner & Business Mentor",
             image: "/vikram.png", // Updated to use actual image
             expertise: "15+ Years in Investment Banking",
             highlights: "Expert in investment banking, startup advisory, and strategic planning. Guides startups through funding rounds.",
+            type: "current"
+        },
+        {
+            name: "Advocate Nilesh S. Pandith",
+            role: "Senior Partner & IP Strategist",
+            image: "/nilesh.png", // Updated to use actual image
+            expertise: "18+ Years in IP Law & Strategy",
+            highlights: "Leading corporate patent strategy, risk management, and IP compliance. Advises on global patent filings and enforcement.",
             type: "current"
         }
     ];
