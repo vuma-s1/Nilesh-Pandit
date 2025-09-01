@@ -82,7 +82,7 @@
 .timelineYear {
     min-width: 120px;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem 0.75rem;
     font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 600;
@@ -92,6 +92,8 @@
     border: 1px solid rgba(255, 215, 0, 0.15);
     position: relative;
     flex-shrink: 0;
+    margin-bottom: 1rem;
+    transform: translateY(0.25rem);
 }
 
 .timelineYear::before {

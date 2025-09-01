@@ -78,8 +78,15 @@ const Footer = () => {
                     {/* Center column - Name/Logo */}
                     <div className={styles.centerContent}>
                         <div className={styles.logoName}>
-                            <span className={styles.logo}>V</span>
-                            <span className={styles.name}>VNX Lexicon</span>
+                            <img 
+                                src="/logo.png" 
+                                alt="VNX Lexicon" 
+                                style={{
+                                    height: 'clamp(5rem, 4rem + 2vw, 6.5rem)',
+                                    width: 'auto',
+                                    objectFit: 'contain'
+                                }}
+                            />
                         </div>
                         <div className={styles.miniBio}>
                             Startup-focused legal and strategic advisory firm helping founders protect their vision, attract investors, and scale without limits.
